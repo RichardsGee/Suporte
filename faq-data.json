@@ -1,0 +1,17 @@
+{
+    "Limite Dimensões Correios": "Neste cenário, o produto excede as dimensões máximas de 70 cm estabelecidas pelos serviços postais.\nUma limitação que se aplica a todas as plataformas que utilizam os serviços dos correios.\nNo entanto, para envios com dimensões superiores a esse limite, disponibilizamos essa alternativa exclusivamente para contas corporativas que possuam CNPJ registrado e tenham habilitado o serviço de transportadora dentro do nosso marketplace.\n\nPara mais informações, <a href='https://seulink.com'>https://seulink.com</a>.",
+
+    "Problema com API do Bling": "Para esta situação, siga os passos abaixo para gerar uma nova chave de API em sua conta Bling:\n1. Acesse a seção de configurações clicando na 'Engrenagem'.\n2. Navegue até 'Todas as Configurações' e selecione 'Cadastro'.\n3. Dentro de 'Cadastro', escolha a opção 'Usuários e Usuário API'.\n4. Selecione o perfil já existente (Wedrop) e crie uma nova chave de API.\n5. Certifique-se de salvar as alterações e, em seguida, insira essa nova chave de API na integração do Bling na WeDrop.",
+
+    "Sua Nova Pergunta": "Sua resposta para a nova pergunta aqui.",
+
+    "Sua Nova Pergunta2": "Sua resposta para a nova pergunta aqui.",
+
+    "Sua Nova Pergunta3": "Sua resposta para a nova pergunta aqui.",
+
+    "Sua Nova Pergunta4": "Sua resposta para a nova pergunta aqui.",
+
+    "Sua Nova Pergunta5": "Sua resposta para a nova pergunta aqui.",
+
+    "Sobre o FULL": "Instruções para Realizar Pedidos no FULL:\n\n1. Para solicitar seus pedidos no serviço FULL da Wedrop, siga os passos abaixo:\n2. Preencha a planilha com os produtos desejados e suas respectivas quantidades. Você pode baixar a planilha [aqui](link da planilha).\n3. Envie a planilha preenchida para o e-mail: full@wedropbr.com.br.\n4. Um de nossos funcionários entrará em contato com você para confirmar a disponibilidade em estoque dos produtos escolhidos e orientá-lo sobre o processo de pagamento.\n5. Após a confirmação do pagamento, seus produtos serão separados e as dimensões das caixas serão calculadas.\n6.Com as informações das dimensões das caixas, você poderá solicitar a retirada das mercadorias junto ao marketplace.\n\nPara mais informações, <a href='https://seulink.com'>https://seulink.com</a>."
+}
