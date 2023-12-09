@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bling FAQ</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Vincule o arquivo CSS externo -->
+</head>
+<body>
+    <!-- Menu -->
+    <ul>
+        <li><a href="Home.html">Página Inicial</a></li>
+        <li><a href="Bling.html">Bling</a></li>
+        <li><a href="Marketplaces.html">Marketplaces</a></li>
+        <li><a href="Pedidos.html">Pedidos</a></li>
+    </ul>
+
+    <!-- Conteúdo do Bling -->
+    <h1>FAQ do Bling</h1>
+
+    <!-- Perguntas -->
+    <h2 onclick="toggleAnswer('pergunta1')">Pergunta 1</h2>
+    <div id="pergunta1" class="resposta">
+        Resposta 1 para a Pergunta 1. Esta resposta aparecerá quando você clicar na pergunta.
+    </div>
+
+    <h2 onclick="toggleAnswer('pergunta2')">Pergunta 2</h2>
+    <div id="pergunta2" class="resposta">
+        Resposta 2 para a Pergunta 2. Esta resposta aparecerá quando você clicar na pergunta.
+    </div>
+
+    <!-- Adicione mais perguntas e respostas conforme necessário -->
+
+    <script>
+        // Função para alternar a exibição da resposta ao clicar na pergunta
+        function toggleAnswer(questionId) {
+            var answer = document.getElementById(questionId);
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
