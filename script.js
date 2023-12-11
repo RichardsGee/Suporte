@@ -35,7 +35,7 @@ function copiarResposta(respostaElement, copiarButton) {
         copiarButton.classList.remove('copiado');
         copiarButton.style.color = '#333'; // Reverte a cor para a cor padrão
     }, 1000); // Isso removerá a classe 'copiado' e reverterá o texto após 1 segundo (você pode ajustar o tempo conforme necessário)
-    
+
     // Mude a cor do ícone temporariamente
     copiarButton.style.color = '#FFCA00'; // Cor verde (você pode ajustar a cor conforme desejado)
 }
@@ -50,85 +50,92 @@ function loadQuestionsAndAnswers() {
         .catch(error => console.error('Erro ao carregar os dados: ', error));
 }
 
-// Função para exibir as perguntas e respostas no documento
+// Função para exibir as perguntas e respostas no documento com títulos de módulo
 function displayQuestionsAndAnswers(data) {
     var faqContainer = document.createElement('div');
     faqContainer.id = 'faq-container';
 
-    var respostas = {}; // Armazenar as respostas em um objeto
+    for (var moduleTitle in data) {
+        if (data.hasOwnProperty(moduleTitle)) {
+            var moduleData = data[moduleTitle];
 
-    for (var key in data) {
-        if (data.hasOwnProperty(key)) {
-            var pergunta = key;
-            var resposta = data[key];
+            var moduleTitleElement = document.createElement('h2');
+            moduleTitleElement.textContent = moduleTitle;
+            faqContainer.appendChild(moduleTitleElement);
 
-            var perguntaElement = document.createElement('h2');
-            perguntaElement.classList.add('pergunta');
-            perguntaElement.textContent = pergunta;
+            for (var i = 0; i < moduleData.length; i++) {
+                var pergunta = moduleData[i].pergunta;
+                var resposta = moduleData[i].resposta;
 
-            // Adiciona um evento de clique para mostrar/ocultar a resposta
-            perguntaElement.addEventListener('click', function() {
-                toggleAnswer(this.nextElementSibling);
-            });
+                var perguntaElement = document.createElement('h3');
+                perguntaElement.classList.add('pergunta');
+                perguntaElement.textContent = pergunta;
 
-            var respostaElement = document.createElement('div');
-            respostaElement.classList.add('resposta');
-            
-            // Use a tag <div> para envolver o texto e aplicar um estilo específico
-            var textoContainer = document.createElement('div');
-            textoContainer.classList.add('texto-container');
-            
-            // Converta o texto da resposta em texto simples
-            var textoSimples = document.createElement('p');
-            textoSimples.innerHTML = resposta;
+                var respostaElement = document.createElement('div');
+                respostaElement.classList.add('resposta');
 
-            textoContainer.appendChild(textoSimples);
-            respostaElement.appendChild(textoContainer);
+                // Use a tag <div> para envolver o texto e aplicar um estilo específico
+                var textoContainer = document.createElement('div');
+                textoContainer.classList.add('texto-container');
 
-            // Cria e define o título da resposta com parênteses ao redor do conteúdo da pergunta clicada
-            var tituloElement = document.createElement('h3');
-            tituloElement.classList.add('TituloResposta');
-            tituloElement.textContent = '(' + pergunta + ')'; // Adiciona parênteses ao redor do texto da pergunta
+                // Converta o texto da resposta em texto simples
+                var textoSimples = document.createElement('p');
+                textoSimples.innerHTML = resposta;
 
-            respostaElement.insertBefore(tituloElement, respostaElement.firstChild); // Adicione o título acima da resposta
+                textoContainer.appendChild(textoSimples);
+                respostaElement.appendChild(textoContainer);
 
-            // Adiciona o botão "Fechar" na resposta
-            var fecharElement = document.createElement('span');
-            fecharElement.classList.add('fechar');
-            fecharElement.innerHTML = '<i class="fas fa-times"></i>'; // Ícone de fechar
-            fecharElement.onclick = function() {
-                closeAllAnswers(respostas);
-            };
-            respostaElement.appendChild(fecharElement);
+                // Cria e define o título da resposta com parênteses ao redor do conteúdo da pergunta clicada
+                var tituloElement = document.createElement('h4');
+                tituloElement.classList.add('TituloResposta');
+                tituloElement.textContent = '(' + pergunta + ')'; // Adiciona parênteses ao redor do texto da pergunta
 
-            // Adiciona o botão "Copiar" na resposta
-            var copiarButton = document.createElement('button');
-            copiarButton.classList.add('copiar');
-            copiarButton.innerHTML = '<i class="far fa-copy"></i>'; // Ícone de copiar
-            copiarButton.onclick = function() {
-                copiarResposta(this.parentElement, this);
-            };
-            respostaElement.appendChild(copiarButton);
+                respostaElement.insertBefore(tituloElement, respostaElement.firstChild); // Adicione o título acima da resposta
 
-            // Adiciona o texto "Copiado ✔️" após o botão "Copiar" (inicialmente oculto)
-            var copiadoTexto = document.createElement('span');
-            copiadoTexto.classList.add('copiado-texto');
-            
-            respostaElement.appendChild(copiadoTexto);
+                // Adiciona o botão "Fechar" na resposta
+                var fecharElement = document.createElement('span');
+                fecharElement.classList.add('fechar');
+                fecharElement.innerHTML = '<i class="fas fa-times"></i>'; // Ícone de fechar
+                fecharElement.onclick = function() {
+                    closeAnswer(this.parentElement);
+                };
+                respostaElement.appendChild(fecharElement);
 
-            respostas[pergunta] = respostaElement; // Armazena a resposta no objeto com a pergunta como chave
+                // Adiciona o botão "Copiar" na resposta
+                var copiarButton = document.createElement('button');
+                copiarButton.classList.add('copiar');
+                copiarButton.innerHTML = '<i class="far fa-copy"></i>'; // Ícone de copiar
+                copiarButton.onclick = function() {
+                    copiarResposta(this.parentElement, this);
+                };
+                respostaElement.appendChild(copiarButton);
 
-            faqContainer.appendChild(perguntaElement);
-            faqContainer.appendChild(respostaElement);
+                // Adiciona o texto "Copiado ✔️" após o botão "Copiar" (inicialmente oculto)
+                var copiadoTexto = document.createElement('span');
+                copiadoTexto.classList.add('copiado-texto');
 
-            // Adicione uma quebra de página após cada resposta
-            var quebraDePagina = document.createElement('div');
-            quebraDePagina.classList.add('quebra-de-pagina');
-            faqContainer.appendChild(quebraDePagina);
+                respostaElement.appendChild(copiadoTexto);
+
+                faqContainer.appendChild(perguntaElement);
+                faqContainer.appendChild(respostaElement);
+
+                // Adicione uma quebra de página após cada resposta
+                var quebraDePagina = document.createElement('div');
+                quebraDePagina.classList.add('quebra-de-pagina');
+                faqContainer.appendChild(quebraDePagina);
+            }
         }
     }
 
     document.body.appendChild(faqContainer);
+
+    // Evento de clique para mostrar/ocultar a resposta ao clicar na pergunta
+    var perguntas = document.querySelectorAll('.pergunta');
+    perguntas.forEach(function(pergunta) {
+        pergunta.addEventListener('click', function() {
+            toggleAnswer(this.nextElementSibling);
+        });
+    });
 }
 
 // Função para alternar a exibição da resposta
@@ -146,27 +153,9 @@ function toggleAnswer(element) {
     }
 }
 
-// Função para fechar todas as respostas
-function closeAllAnswers(respostas) {
-    for (var key in respostas) {
-        respostas[key].style.display = 'none';
-    }
-}
-
-// Função para filtrar perguntas com base na pesquisa
-function filtrarPerguntas(textoPesquisa) {
-    var perguntas = document.querySelectorAll('.pergunta'); // Seleciona todas as perguntas
-
-    perguntas.forEach(function(pergunta) {
-        var perguntaTexto = pergunta.textContent.toLowerCase(); // Obtém o texto da pergunta em letras minúsculas
-
-        // Verifica se o texto da pergunta contém o texto da pesquisa
-        if (perguntaTexto.includes(textoPesquisa.toLowerCase())) {
-            pergunta.style.display = 'block'; // Mostra a pergunta se corresponder à pesquisa
-        } else {
-            pergunta.style.display = 'none'; // Oculta a pergunta se não corresponder à pesquisa
-        }
-    });
+// Função para fechar uma resposta específica
+function closeAnswer(resposta) {
+    resposta.style.display = 'none';
 }
 
 // Seletor para o campo de pesquisa
@@ -177,6 +166,21 @@ campoPesquisa.addEventListener('input', function() {
     var textoPesquisa = campoPesquisa.value.toLowerCase(); // Obtém o texto digitado em letras minúsculas
     filtrarPerguntas(textoPesquisa); // Chama a função de filtro de perguntas
 });
+
+// Função para filtrar perguntas com base no texto de pesquisa
+function filtrarPerguntas(textoPesquisa) {
+    var perguntas = document.querySelectorAll('.pergunta');
+    perguntas.forEach(function(pergunta) {
+        var perguntaTexto = pergunta.textContent.toLowerCase();
+        var resposta = pergunta.nextElementSibling;
+        if (perguntaTexto.includes(textoPesquisa)) {
+            pergunta.style.display = 'block';
+            resposta.style.display = 'none';
+        } else {
+            pergunta.style.display = 'none';
+        }
+    });
+}
 
 // Chamar a função para carregar as perguntas e respostas ao carregar a página
 window.onload = loadQuestionsAndAnswers;
