@@ -1,23 +1,14 @@
 /* Defina o background do corpo (body) com a cor #121212 */
 body {
     background-color: #121212;
-}
-
-/* Adicione a fonte Poppins ao seu projeto */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* Defina a fonte Poppins como a fonte padrão para todo o seu projeto */
-body {
+    color: white;
     font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Peso da fonte regular */
 }
-
-/* Define o charset como UTF-8 */
-@charset "UTF-8";
 
 a {
     color: #005bb7; /* Substitua #FF0000 pela cor desejada em formato hexadecimal, RGB, ou nome da cor. */
 }
-
 
 /* Estilos para o menu */
 ul {
@@ -75,6 +66,15 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* Estilos para os temas */
+h2 {
+    font-size: 20px; /* Tamanho da fonte para os temas */
+    color: #FFCA00;
+    margin-top: 20px; /* Espaço superior reduzido */
+    margin-bottom: 10px; /* Espaço inferior reduzido */
+    text-align: left; /* Alinhe o texto à esquerda */
+}
+
 /* Estilos para as perguntas */
 .pergunta {
     position: left; /* Para permitir a posição da barra lateral */
@@ -82,9 +82,11 @@ h1 {
     border-left: 5px solid #FED714; /* Cor e largura da barra lateral */
     cursor: pointer;
     font-size: 18px;
+    font-weight: 300; /* Define a fonte como "thin" */
+    font-family: 'Poppins', sans-serif; /* Certifique-se de incluir a fonte Poppins */
     color: white;
-    margin-top: 10px;
-    padding: 0px 0;
+    margin-top: 5px; /* Espaço superior reduzido */
+    margin-bottom: 0px; /* Espaço inferior reduzido */
     text-align: left;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
@@ -92,9 +94,8 @@ h1 {
     box-sizing: border-box; /* Evita que o padding afete a largura total */
     transition: color 0.3s; /* Adiciona uma transição suave à cor do texto */
     display: inline-block; /* Alterado de "block" para "inline-block" */
-	margin-bottom: 0.5px;
-
 }
+
 
 /* Adiciona espaço antes do texto da pergunta */
 .pergunta::before {
@@ -113,7 +114,6 @@ h1 {
     width: 100%; /* Garante que o texto ocupe toda a largura disponível */
 }
 
-
 /* Estilo para os links quando são hover (mouse sobre eles) */
 .texto-container a:hover {
     color: #0056b3; /* Cor desejada quando o mouse está sobre os links */
@@ -122,10 +122,6 @@ h1 {
 /* Estilo para a linha entre pergunta e resposta */
 .quebra-de-pagina {
     page-break-after: always;
-}
-
-.texto-container {
-    white-space: pre-wrap; /* Isso permite a quebra de linha conforme necessário */
 }
 
 /* Estilos para as respostas */
@@ -180,7 +176,7 @@ h1 {
 /* Estilos para o texto "Copiar" ao lado do botão */
 .resposta .copiar-texto {
     margin-right: 5px;
-	color: white;
+    color: white;
 }
 
 /* Estilos para o texto "Copiado" quando o botão é clicado */
@@ -208,13 +204,13 @@ h1 {
 #filtro-perguntas {
     /* Adicione os estilos desejados para o botão de pesquisa aqui */
     padding: 10px; /* Espaçamento interno para melhor aparência */
-	width: 200px; /* Defina a largura desejada em pixels ou outra unidade de medida */
-	height: 15px; /* Defina a altura desejada em pixels ou outra unidade de medida */
+    width: 200px; /* Defina a largura desejada em pixels ou outra unidade de medida */
+    height: 15px; /* Defina a altura desejada em pixels ou outra unidade de medida */
     border: 1px solid #ccc; /* Borda fina ao redor do botão */
     border-radius: 5px; /* Borda arredondada */
     font-size: 16px; /* Tamanho da fonte */
     color: #333; /* Cor do texto */
-	font-family: 'Poppins regular', sans-serif;
+    font-family: 'Poppins regular', sans-serif;
     background-color: #fff; /* Cor de fundo */
     /* Outros estilos conforme necessário */
 }
