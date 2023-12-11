@@ -51,7 +51,7 @@ li a:hover {
 
 /* Estilos para o título do FAQ */
 h1 {
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     margin-top: 30px;
     text-align: center;
@@ -68,7 +68,7 @@ h1 {
 
 /* Estilos para os temas */
 h2 {
-    font-size: 20px; /* Tamanho da fonte para os temas */
+    font-size: 18px; /* Tamanho da fonte para os temas */
     color: #FFCA00;
     margin-top: 20px; /* Espaço superior reduzido */
     margin-bottom: 10px; /* Espaço inferior reduzido */
@@ -81,7 +81,7 @@ h2 {
     padding-left: 5px; /* Aumente o espaço entre a borda e o texto e mova o texto para a direita */
     border-left: 5px solid #FED714; /* Cor e largura da barra lateral */
     cursor: pointer;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 300; /* Define a fonte como "thin" */
     font-family: 'Poppins', sans-serif; /* Certifique-se de incluir a fonte Poppins */
     color: white;
