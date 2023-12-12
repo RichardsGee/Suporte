@@ -6,7 +6,7 @@
         },
         {
             "pergunta": "Gerar nova api no Bling",
-            "resposta": "Para esta situação, siga os passos abaixo para gerar uma nova chave de API em sua conta Bling:\n1. Acesse a seção de configurações clicando na 'Engrenagem'.\n2. Navegue até 'Todas as Configurações' e selecione 'Cadastro'.\n3. Dentro de 'Cadastro', escolha a opção 'Usuários e Usuário API'.\n4. Selecione o perfil já existente (Wedrop) clique em gerar uma nova chave de API.\n5. Certifique-se de salvar as alterações e, em seguida, insira essa nova chave de API na integração do Bling no WeDrop."
+            "resposta": "Para esta situação, siga os passos abaixo para gerar uma nova chave de API em sua conta Bling:\n1. Acesse a seção de configurações clicando na 'Engrenagem'.\n2. Navegue até 'Todas as Configurações' e selecione 'Sistema'.\n3. Dentro de 'Cadastro', escolha a opção 'Usuários e Usuário API'.\n4. Selecione o perfil já existente (Wedrop) clique em gerar uma nova chave de API.\n5. Certifique-se de salvar as alterações e, em seguida, insira essa nova chave de API na integração do Bling no WeDrop."
         },
         {
             "pergunta": "O que fazer no pós-venda",
