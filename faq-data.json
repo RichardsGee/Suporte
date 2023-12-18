@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "#Integração": [
         {
@@ -98,3 +99,105 @@
         
     ]
 }
+=======
+{
+    "#Integração": [
+        {
+            "pergunta": "Limite Dimensões Correios",
+            "resposta": "Nesse caso, ultrapassa-se o limite de dimensão para envios na logística. É importante lembrar que os Correios têm uma altura máxima de 70 cm. Para envios maiores do que isso, é necessário possuir um CNPJ e ter a transportadora ativa no marketplace."
+        },
+        {
+            "pergunta": "Gerar nova api no Bling",
+            "resposta": "Siga os passos abaixo para gerar uma nova chave de API em sua conta Bling:\n1. Acesse a seção de configurações clicando na 'Engrenagem'.\n2. Navegue até 'Todas as Configurações' e selecione 'Sistema'.\n3. Dentro de 'Cadastro', escolha a opção 'Usuários e Usuário API'.\n4. Selecione o perfil já existente (Wedrop) clique em gerar uma nova chave de API.\n5. Certifique-se de salvar as alterações e, em seguida, insira essa nova chave de API na integração do Bling no WeDrop."
+        },
+        {
+            "pergunta": "Verificar api key",
+            "resposta": "Por favor, verifique se sua integração com o Bling está válida.\n\nNo WeDrop, vá até 'Minhas Integrações'. Você verá a integração ERP (Bling). Clique em 'Editar' e, em seguida, na parte inferior, clique em 'Verificar'. Isso lhe retornará uma informação sobre a validade da integração."
+        },
+        {
+            "pergunta": "Dúvida 5",
+            "resposta": "Resposta 5."
+        }                
+    ],
+    "#Pedidos": [
+        {
+            "pergunta": "Sobre o FULL",
+            "resposta": "Instruções para Realizar Pedidos no FULL da Wedrop:\n\n1. Preencha a planilha com os produtos desejados e suas respectivas quantidades. Você pode baixar a planilha [aqui](link da planilha).\n2. Envie a planilha preenchida para o e-mail: full@wedropbr.com.br.\n3. Um de nossos funcionários entrará em contato com você para confirmar a disponibilidade em estoque dos produtos escolhidos e orientá-lo sobre o processo de pagamento.\n4. Após a confirmação do pagamento, seus produtos serão separados e as dimensões das caixas serão calculadas.\n5. Com as informações das dimensões das caixas, você poderá solicitar a retirada das mercadorias junto ao marketplace.\n\nPara mais informações, <a href='https://seulink.com'>https://seulink.com</a>."
+        },
+		{
+            "pergunta": "Importar pedidos",
+            "resposta": "*No WeDrop:*\n1. Clique em 'Meus Pedidos'.\n2. Localize e clique no botão amarelo (ícone de nuvem com seta para baixo).\n3. Escolha a data da VENDA.\n4. Clique em 'Procurar'.\n\n⇾ Se você tentou importar manualmente no WeDrop e não encontrou o pedido:\n\n*No Bling:*\n1. Vá para 'VENDAS'.\n2. Selecione 'Pedidos de Venda'.\n3. Verifique se o seu pedido aparece lá.\n\n⇾ Se o pedido não estiver listado:\n\n*Ainda no Bling:*\n1. Vá para 'VENDAS'.\n2. Escolha 'Pedidos de Venda MULTILOJA'.\n3. Procure o seu pedido e clique em 'importar'.\n4. Após fazer isso, volte para o WeDrop e tente importar novamente.."
+        },
+		{
+            "pergunta": "Produto chegou quebrado",
+            "resposta": "Se o produto chegou quebrado, a responsabilidade será da transportadora. A WeDrop realiza uma conferência completa antes do envio do pedido, portanto, é comum ocorrer algum tipo de avaria durante o transporte. Como você está pagando por esse serviço, a transportadora deve cuidar do seu pedido. Portanto, recomendamos que você negocie com o cliente da maneira que achar melhor, mas depois entre em contato com a transportadora que você utilizou para ser ressarcido. Você enviou um produto em perfeito estado, e ele chegou danificado após o transporte."
+        },
+		{
+            "pergunta": "Baixar Nota Fiscal de entrada",
+            "resposta": "Se você precisa da nota fiscal e realizou a venda com CNPJ, você pode encontrar a nota no seu pedido. Siga estas etapas:\n\n1. Acesse o WeDrop.\n2. Vá para 'Meus Pedidos'.\n3. Encontre o pedido desejado e clique nos três pontos em amarelo.\n4. Faça o download da sua nota fiscal."
+        },
+		{
+            "pergunta": "Como rastrear pedido nos Correios",
+            "resposta": "Para rastrear o seu pedido dos Correios, siga estas etapas:\n\n1. Acesse o WeDrop.\n2. Vá para 'Meus Pedidos'.\n3. Encontre o pedido que deseja rastrear e clique nos três pontos em amarelo.\n4. Selecione a opção 'Ver Etiqueta'.\n5. Copie o código de rastreio.\n6. Acesse o site dos Correios e cole o código de rastreio na opção de rastreamento para verificar se a informação de postagem está disponível."
+        },
+		{
+            "pergunta": "Consulta sobre devolução (recente)",
+            "resposta": "O processo de devolução não tem um prazo fixo e segue a ordem de chegada ao nosso galpão. Todas as devoluções são tratadas com igual importância, sem prioridades. O motivo da devolução não é considerado, apenas o processo em si, com atenção para evitar erros na conversão em saldo e na atualização do pedido.\n\nAguarde a atualização do seu processo de devolução na página do seu pedido. Estamos trabalhando para resolver tudo da melhor maneira possível. Se tiver dúvidas, entre em contato."
+        },
+		{
+            "pergunta": "Como iniciar o processo de devolução",
+            "resposta": "Após o comprador postar o produto, obtenha o código de rastreamento, vá até o pedido correspondente no WeDrop, clique no botão amarelo e selecione 'Informar devolução'. Em seguida, preencha os dados e aguarde a devolução do produto, para que nossa equipe realize a verificação e análise do item devolvido. Você poderá acompanhar o histórico da devolução no próprio pedido. Caso a devolução esteja de acordo com as normas estabelecidas, o reembolso será creditado em saldo na carteira."
+        }
+		
+    ],
+    "#Regras": [
+        {
+            "pergunta": "Requisitos para uso de CNPJ",
+            "resposta": "Para utilizar o WeDrop com CNPJ, é fundamental observar as seguintes DIRETRIZES:\n\n1 - O CNPJ deve pertencer a uma empresa que possua um ENDEREÇO FISCAL LOCALIZADO NO ESTADO DE SÃO PAULO.\n2 - O CNPJ deve ser de uma empresa do SETOR DE COMÉRCIO VAREJISTA (empresas de serviços não estão autorizadas a utilizar o WeDrop).\n3 - Por favor, NÃO abrir uma empresa com o MESMO ENDEREÇO DO GALPÃO DO WEDROP.\n4 - É mandatório possuir uma INSCRIÇÃO ESTADUAL ativa e um CERTIFICADO DIGITAL.\n5 - Certifique-se de compreender as configurações necessárias e saber emitir uma NOTA FISCAL ELETRÔNICA (NFE) utilizando o sistema Bling.\n\nPara um guia detalhado sobre a configuração de CNPJ no Bling, consulte o link a seguir: <a href='https://ajuda.bling.com.br/hc/pt-br/articles/360034420894-Completar-os-dados-da-empresa'>https://ajuda.bling.com.br/hc/pt-br/articles/360034420894-Completar-os-dados-da-empresa</a>\nSiga cada passo representado pelas bolinhas verdes.\n\nImportante: Preencha corretamente seu CNPJ e INSCRIÇÃO ESTADUAL no Wedrop, pois informações imprecisas podem levar ao bloqueio da conta.\n\nCONTAS QUE NÃO SE ADEQUAREM A ESSAS REGRAS ESTARÃO SUJEITAS A BLOQUEIO E, EM CASO DE PERSISTÊNCIA, PODERÃO SER EXCLUÍDAS."
+			
+		},
+        {	
+        	"pergunta": "Política de Devolução",
+            "resposta": "#AVISO: O Wedrop não recebe nem se responsabiliza por compras entregues no Galpão.\n\n#ATENÇÃO:\n1. Compras particulares enviadas ao CD serão consideradas perdidas.\n2. Não iremos comprometer nossa eficiência logística, desviando o foco dos envios e devoluções da Wedrop para lidar com pedidos particulares de terceiros.\n\n✅ O WEDROP É EXCLUSIVAMENTE VOLTADO PARA O ENVIO E RECEBIMENTO DE VENDAS DE PRODUTOS DA PLATAFORMA."
+		}
+    ],
+	"#Marketplace": [
+        {
+            "pergunta": "Entrou para Shopee Xpress (o que muda?)",
+            "resposta": "Agora você faz parte da logística Shopee Xpress. Não é necessário realizar nenhuma modificação na integração. Lembrando que, após essa migração, caso seja vendedor(a) CNPJ se torna necessária a emissão e o envio da Nota Fiscal de saída após cada venda, de acordo com as diretrizes da Shopee."
+			
+		},
+        {	
+        	"pergunta": "Dúvida 2",
+            "resposta": "Resposta 2."
+		}
+    ],
+	"#Financeiro": [
+        {
+            "pergunta": "Reembolso em carteira",
+            "resposta": "Se você deseja prosseguir com o reembolso do valor em carteira, por favor, formalize a solicitação por e-mail para full.commerce@hotmail.com.\n\n⇾ Certifique-se de incluir as seguintes informações no e-mail:\n\n1. Seu e-mail associado à conta do WeDrop.\n2. Seu nome.\n3. O motivo pelo qual você está solicitando o reembolso."
+			
+		},
+        {	
+        	"pergunta": "Dúvida 2",
+            "resposta": "Resposta 2."
+		}
+	],
+	"#Dúvidas": [
+        {
+            "pergunta": "Reembolso em carteira",
+            "resposta": "Se você deseja prosseguir com o reembolso do valor em carteira, por favor, formalize a solicitação por e-mail para full.commerce@hotmail.com.\n\n⇾ Certifique-se de incluir as seguintes informações no e-mail:\n\n1. Seu e-mail associado à conta do WeDrop.\n2. Seu nome.\n3. O motivo pelo qual você está solicitando o reembolso."
+			
+		},
+        {
+            "pergunta": "O que fazer no pós-venda",
+            "resposta": "Após realizar uma venda, você deve importar o pedido no WeDrop. Caso todas as configurações estejam corretas, clique no ícone da nuvem amarela na página 'Resumo'. Em seguida, adicione saldo à sua carteira, caso ainda não o tenha feito, e efetue o pagamento do produto, se estiver tudo correto. Nossa equipe ficará encarregada de separar e enviar o pedido para o seu comprador final."
+        },
+		{
+            "pergunta": "Uma conta só para o WeDrop no Mktplace",
+            "resposta": "A conta deve ser exclusiva para os produtos da WeDrop, pois o endereço do galpão deve ser informado como endereço de envio/devolução nos marketplaces."
+        }
+        
+    ]
+}
+>>>>>>> a299215e1d394a315b1f21824f478df11521eeac
