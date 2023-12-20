@@ -94,7 +94,20 @@
 		{
             "pergunta": "Uma conta só para o WeDrop no Mktplace",
             "resposta": "A conta deve ser exclusiva para os produtos da WeDrop, pois o endereço do galpão deve ser informado como endereço de envio/devolução nos marketplaces."
+        },
+		{
+            "pergunta": "Produto chegou danificado, como proceder?",
+            "resposta": "Quando um item apresenta danos físicos, a melhor abordagem é entrar em contato com o suporte do Marketplace para solicitar o ressarcimento. É importante explicar que a loja enviou o produto em perfeito estado e, se houve algum dano físico, a responsabilidade recai sobre a transportadora."
+        },
+		{
+            "pergunta": "Contabilidade Indicada (Contato)",
+            "resposta": "Contabilidade Indicada.\n(FS CONTÁBIL)\n\nWhatsApp ⇾ (11) 96785-0173\nE-mail ⇾ clientes.wedrop@fscont.com.br\nSegunda à Sexta das 08h as 17h."
+        },
+		{
+            "pergunta": "Contabilidade Indicada (Valores)",
+            "resposta": "Serviços Contábeis: R$249 por mês.\nServiços Contábeis + Endereço Fiscal: R$299 por mês.\nTaxa de abertura de Empresa: R$200"
         }
-        
+	
+		        
     ]
 }
