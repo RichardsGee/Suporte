@@ -1,5 +1,5 @@
 // URL do WebSocket no servidor Node-RED
-const serverWebSocketUrl = 'ws://richard:SdkpgVh8LtkbaXm6@194.163.134.51:1880/endpoint/buscar';
+const serverWebSocketUrl = 'ws://163.134.51:1880/endpoint/buscar';
 
 // Credenciais de autenticação
 const username = 'richard'; // Substitua com seu nome de usuário
