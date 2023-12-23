@@ -248,6 +248,46 @@ h2 {
     margin-left: 10px; /* Ajuste o valor conforme necessário */
 }
 
+/* Estilos para o campo de pesquisa */
+#campo-pesquisa {
+    padding: 10px; /* Espaçamento interno para melhor aparência */
+    width: 70%; /* Defina a largura desejada (70% da largura disponível) */
+    border: 1px solid #ccc; /* Borda fina ao redor do campo */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 18px; /* Tamanho da fonte ajustado para 18px */
+    color: #333; /* Cor do texto */
+    font-family: 'Poppins regular', sans-serif;
+    background-color: #fff; /* Cor de fundo */
+    margin-right: 10px; /* Espaço à direita para separar do botão */
+}
 
+/* Estilos para o botão "Pesquisar" */
+#formulario-consulta button[type="submit"] {
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 18px; /* Tamanho da fonte ajustado para 18px */
+    background-color: #FFCA00; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda */
+    border-radius: 0px; /* Borda arredondada */
+    cursor: pointer; /* Cursor do mouse de mãozinha ao passar sobre o botão */
+    font-family: 'Poppins regular', sans-serif;
+}
+
+/* Estilo para o botão "Pesquisar" quando hover (mouse sobre ele) */
+#formulario-consulta button[type="submit"]:hover {
+    background-color: #003f80; /* Cor de fundo alterada ao passar o mouse */
+}
+
+/* Estilos para o rótulo (label) */
+label[for="campo-pesquisa"] {
+    font-size: 18px; /* Ajuste o tamanho da fonte desejado, por exemplo, 18px */
+}
+
+/* Centralizar o campo de pesquisa e o botão "Pesquisar" na tela */
+#formulario-consulta {
+    text-align: center; /* Centralizar elementos internamente */
+    margin: 0 auto; /* Centralizar horizontalmente na tela */
+    max-width: 600px; /* Largura máxima para evitar que fiquem muito largos */
+}
 
 
