@@ -6,7 +6,7 @@ const username = 'richard'; // Substitua com seu nome de usuário
 const password = 'SdkpgVh8LtkbaXm6'; // Substitua com sua senha
 
 // Verifica se a página atual é 'resultado.html' antes de iniciar o WebSocket
-if (window.location.pathname.endsWith('/resultado.html')) {
+if (window.location.pathname.endsWith('/Suporte/resultado.html')) {
     // Obtém o valor da consulta a partir da URL
     const urlParams = new URLSearchParams(window.location.search);
     const consulta = urlParams.get('consulta');
