@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquivos</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Adicione o link para o FontAwesome aqui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menu -->
+    <ul>
+    <li class="logo-menu"><a href="faq.html"><img src="https://app.wedrop.com.br/wedrop_logo.svg" alt="Logo do WeDrop" width="160" height="30"></a></li>
+                <li><a href="faq.html">FAQ</a></li> <!-- Adicione o botão de voltar para a página /faq -->
+        <li><a href="consulta.html">Consultar api key</a></li> <!-- Adicione o botão de voltar para a página /faq -->
+	        <li><a href="files.html">Documentos</a></li> <!-- Adicione o botão de voltar para a página /faq -->
+
+</ul>
+
+    <!-- Conteúdo da página -->
+    <h1>Arquivos Disponíveis</h1>
+
+<!-- Campo de pesquisa e botão "Limpar" -->
+<div class="search-bar">
+    <input type="text" id="pesquisar-files" placeholder="Pesquisar...">
+    <button id="limpar-pesquisa">Limpar</button>
+</div>
+	<br><br>
+
+
+    <!-- Tabela de arquivos -->
+    <table class="file-table">
+        <thead>
+            <tr>
+                <th>Ícone</th>
+                <th>Nome</th>
+                <th>Tamanho</th>
+                <th>Link (download)</th>
+                <th>Copiar</th>
+            </tr>
+        </thead>
+        <tbody>
+           <!-- Linha 1: Documento PDF -->
+<tr>
+    <td><img src="img/xls.png" alt="Ícone PDF" width="32" height="32"></td>
+    <td>Calculadora de Precificação</td>
+    <td>2.5 MB</td>
+    <td><a href="http://localhost/Suporte/doc/Calculadora%20Precificac%cc%a7a%cc%83o.xlsx" download>Download</a></td>
+    <td><button class="copiar-button" data-url="http://localhost/Suporte/doc/Calculadora%20Precificac%cc%a7a%cc%83o.xlsx">Copiar</button></td>
+</tr>
+
+<!-- Linha 2: Documento Word -->
+<tr>
+    <td><img src="img/word.png" alt="Ícone Word" width="32" height="32"></td>
+    <td>Documento Word</td>
+    <td>1.8 MB</td>
+    <td><a href="documento2.docx" download>Download</a></td>
+    <td><button class="copiar-button" data-url="documento2.docx">Copiar</button></td>
+</tr>
+
+<!-- Linha 3: Planilha Excel -->
+<tr>
+    <td><img src="img/excel.png" alt="Ícone Excel" width="32" height="32"></td>
+    <td>Planilha Excel</td>
+    <td>3.2 MB</td>
+    <td><a href="documento3.xlsx" download>Download</a></td>
+    <td><button class="copiar-button" data-url="documento3.xlsx">Copiar</button></td>
+</tr>
+
+<!-- Linha 4: Apresentação PowerPoint -->
+<tr>
+    <td><img src="img/powerpoint.png" alt="Ícone PowerPoint" width="32" height="32"></td>
+    <td>Apresentação PowerPoint</td>
+    <td>4.5 MB</td>
+    <td><a href="documento4.pptx" download>Download</a></td>
+    <td><button class="copiar-button" data-url="documento4.pptx">Copiar</button></td>
+</tr>
+
+<!-- Linha 5: Imagem JPG -->
+<tr>
+    <td><img src="img/image.png" alt="Ícone Imagem" width="32" height="32"></td>
+    <td>Imagem JPG</td>
+    <td>800 KB</td>
+    <td><a href="imagem.jpg" download>Download</a></td>
+    <td><button class="copiar-button" data-url="imagem.jpg">Copiar</button></td>
+</tr>
+
+            <!-- Adicione mais linhas para outros arquivos aqui -->
+        </tbody>
+    </table>
+
+    <!-- Scripts -->
+    <script>
+        // Função para copiar a URL do arquivo
+        function copiarURL(url) {
+            // Cria um elemento de entrada de texto temporário
+            var input = document.createElement('input');
+            input.setAttribute('value', url);
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            alert('URL copiada com sucesso!');
+        }
+
+        // Adiciona um ouvinte de eventos de clique aos botões de cópia
+        var copiarButtons = document.querySelectorAll('.copiar-button');
+        copiarButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var url = button.getAttribute('data-url');
+                copiarURL(url);
+            });
+        });
+		
+		// Adicione um ouvinte de eventos de tecla ao campo de pesquisa
+var campoPesquisa = document.getElementById('pesquisar-files');
+
+campoPesquisa.addEventListener('keyup', function () {
+    var filtro = campoPesquisa.value.toLowerCase();
+    var linhas = document.querySelectorAll('.file-table tbody tr');
+
+    linhas.forEach(function (linha) {
+        var nomeArquivo = linha.querySelector('td:nth-child(2)').textContent.toLowerCase();
+        if (nomeArquivo.includes(filtro)) {
+            linha.style.display = '';
+        } else {
+            linha.style.display = 'none';
+        }
+    });
+});
+
+		// Ouvinte de eventos de clique para o botão "Limpar"
+var botaoLimpar = document.getElementById('limpar-pesquisa');
+botaoLimpar.addEventListener('click', function () {
+    campoPesquisa.value = ''; // Limpa o campo de pesquisa
+    // Restaura a exibição de todas as linhas da tabela
+    var linhas = document.querySelectorAll('.file-table tbody tr');
+    linhas.forEach(function (linha) {
+        linha.style.display = '';
+    });
+});
+
+    </script>
+
+</body>
+</html>

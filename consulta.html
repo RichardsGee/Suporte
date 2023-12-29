@@ -12,14 +12,18 @@
     
 <!-- Menu -->
 <ul>
-    <li class="logo-menu"><a href="faq.html"><img src="img/wedroplogo.svg" alt="Logo do WeDrop" width="160" height="30"></a></li>
+    <li class="logo-menu"><a href="faq.html"><img src="https://app.wedrop.com.br/wedrop_logo.svg" alt="Logo do WeDrop" width="160" height="30"></a></li>
+                <li><a href="faq.html">FAQ</a></li> <!-- Adicione o botão de voltar para a página /faq -->
+        <li><a href="consulta.html">Consultar api key</a></li> <!-- Adicione o botão de voltar para a página /faq -->
+	        <li><a href="files.html">Documentos</a></li> <!-- Adicione o botão de voltar para a página /faq -->
+
 </ul>
 
 <!-- Conteúdo do Bling -->
 <h1>Consultar sincronização de estoque</h1>
 
 <form id="formulario-consulta" action="resultado.html">
-    <label for="campo-pesquisa">Digite aqui a api do Bling:</label>
+    <label for="campo-pesquisa"></label>
     <input type="text" id="campo-pesquisa" name="consulta" placeholder="Pesquisar...">
     <button type="submit">Pesquisar</button>
 </form>
@@ -30,5 +34,6 @@
 <div style="height: 20px;"></div> <!-- Este div cria uma linha em branco de 20 pixels de altura -->
 <!-- Adicione mais perguntas e respostas conforme necessário -->
 <script src="node.js"></script>
+	
 </body>
 </html>

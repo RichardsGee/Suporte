@@ -37,20 +37,69 @@ function copiarResposta(respostaElement, copiarButton) {
     }, 1000); // Isso removerá a classe 'copiado' e reverterá o texto após 1 segundo (você pode ajustar o tempo conforme necessário)
 }
 
-// Função para carregar as perguntas e respostas do arquivo JSON
-function loadQuestionsAndAnswers() {
-    fetch('faq-data.json')
+// Função para carregar as perguntas e respostas de faq-integracao.json
+function loadQuestionsAndAnswersIntegracao() {
+    fetch('faq-integracao.json')
         .then(response => response.json())
         .then(data => {
-            displayQuestionsAndAnswers(data);
+            displayQuestionsAndAnswers(data, 'faq-integracao-container');
+        })
+        .catch(error => console.error('Erro ao carregar os dados: ', error));
+}
+
+// Função para carregar as perguntas e respostas de faq-pedidos.json
+function loadQuestionsAndAnswersPedidos() {
+    fetch('faq-pedidos.json')
+        .then(response => response.json())
+        .then(data => {
+            displayQuestionsAndAnswers(data, 'faq-pedidos-container');
+        })
+        .catch(error => console.error('Erro ao carregar os dados: ', error));
+}
+
+// Função para carregar as perguntas e respostas do terceiro container (faq-terceiro.json)
+function loadQuestionsAndAnswersTerceiro() {
+    fetch('faq-terceiro.json')
+        .then(response => response.json())
+        .then(data => {
+            displayQuestionsAndAnswers(data, 'faq-terceiro-container');
+        })
+        .catch(error => console.error('Erro ao carregar os dados: ', error));
+}
+
+// Função para carregar as perguntas e respostas do quarto container (faq-quarto.json)
+function loadQuestionsAndAnswersQuarto() {
+    fetch('faq-quarto.json')
+        .then(response => response.json())
+        .then(data => {
+            displayQuestionsAndAnswers(data, 'faq-quarto-container');
+        })
+        .catch(error => console.error('Erro ao carregar os dados: ', error));
+}
+
+// Função para carregar as perguntas e respostas do quinto container (faq-quinto.json)
+function loadQuestionsAndAnswersQuinto() {
+    fetch('faq-quinto.json')
+        .then(response => response.json())
+        .then(data => {
+            displayQuestionsAndAnswers(data, 'faq-quinto-container');
+        })
+        .catch(error => console.error('Erro ao carregar os dados: ', error));
+}
+
+// Função para carregar as perguntas e respostas do sexto container (faq-sexto.json)
+function loadQuestionsAndAnswersSexto() {
+    fetch('faq-sexto.json')
+        .then(response => response.json())
+        .then(data => {
+            displayQuestionsAndAnswers(data, 'faq-sexto-container');
         })
         .catch(error => console.error('Erro ao carregar os dados: ', error));
 }
 
 // Função para exibir as perguntas e respostas no documento com títulos de módulo
-function displayQuestionsAndAnswers(data) {
-    var faqContainer = document.createElement('div');
-    faqContainer.id = 'faq-container';
+function displayQuestionsAndAnswers(data, containerId) {
+    var faqContainer = document.getElementById(containerId);
 
     for (var moduleTitle in data) {
         if (data.hasOwnProperty(moduleTitle)) {
@@ -130,10 +179,8 @@ function displayQuestionsAndAnswers(data) {
         }
     }
 
-    document.body.appendChild(faqContainer);
-
     // Evento de clique para mostrar/ocultar a resposta ao clicar na pergunta
-    var perguntas = document.querySelectorAll('.pergunta');
+    var perguntas = faqContainer.querySelectorAll('.pergunta');
     perguntas.forEach(function (pergunta) {
         pergunta.addEventListener('click', function () {
             toggleAnswer(this.nextElementSibling);
@@ -216,16 +263,16 @@ function adicionarBotaoLimpar() {
     // Crie o botão "Limpar"
     var botaoLimpar = document.createElement('button');
     botaoLimpar.textContent = 'Limpar';
-    
+
     // Adicione a classe CSS ao botão "Limpar"
     botaoLimpar.classList.add('botao-limpar');
-    
+
     // Adicione um evento de clique ao botão para limpar o campo de pesquisa
     botaoLimpar.addEventListener('click', function () {
         campoPesquisa.value = ''; // Limpa o campo de pesquisa
         filtrarPerguntas(''); // Chama a função de filtro com uma string vazia para exibir todas as perguntas novamente
     });
-    
+
     // Adicione o botão "Limpar" à caixa de pesquisa
     var campoPesquisa = document.getElementById('filtro-perguntas');
     campoPesquisa.parentNode.insertBefore(botaoLimpar, campoPesquisa.nextSibling);
@@ -234,6 +281,12 @@ function adicionarBotaoLimpar() {
 // Chame a função para adicionar o botão "Limpar"
 adicionarBotaoLimpar();
 
-
-// Chamar a função para carregar as perguntas e respostas ao carregar a página
-window.onload = loadQuestionsAndAnswers;
+// Chamar as funções para carregar as perguntas e respostas ao carregar a página
+window.onload = function () {
+    loadQuestionsAndAnswersIntegracao();
+    loadQuestionsAndAnswersPedidos();
+    loadQuestionsAndAnswersTerceiro();
+    loadQuestionsAndAnswersQuarto();
+    loadQuestionsAndAnswersQuinto();
+    loadQuestionsAndAnswersSexto();
+};

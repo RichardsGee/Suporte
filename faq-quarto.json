@@ -1,0 +1,17 @@
+{
+    "#Marketplace": [
+        {
+            "pergunta": "Entrou para Shopee Xpress (o que muda?)",
+            "resposta": "Agora você faz parte da logística Shopee Xpress. Não é necessário realizar nenhuma modificação na integração. Lembrando que, após essa migração, caso seja vendedor(a) CNPJ se torna necessária a emissão e o envio da Nota Fiscal de saída após cada venda, de acordo com as diretrizes da Shopee."
+			
+		},
+		{
+            "pergunta": "Horário de corte Shopee",
+            "resposta": "O horário de corte para pagamento na Shopee é de segunda a sexta, até as 10:00h, e a etiqueta precisa estar no sistema até as 10:20h no máximo. Os pedidos feitos após esse horário na sexta-feira, assim como aos sábados e domingos, serão enviados apenas na segunda ou terça-feira."
+        },
+        {	
+        	"pergunta": "Dúvida 2",
+            "resposta": "Resposta 2."
+		}
+    ]
+}

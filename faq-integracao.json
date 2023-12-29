@@ -1,0 +1,57 @@
+{
+    "#Integração": [
+        {
+            "pergunta": "Limite Dimensões Correios",
+            "resposta": "Nesse caso, ultrapassa-se o limite de dimensão para envios na logística. É importante lembrar que os Correios têm uma altura máxima de 70 cm. Para envios maiores do que isso, é necessário possuir um CNPJ e ter a transportadora ativa no marketplace."
+        },
+        {
+            "pergunta": "Gerar nova api no Bling",
+            "resposta": "Siga os passos abaixo para gerar uma nova chave de API em sua conta Bling:\n1. Acesse a seção de configurações clicando na 'Engrenagem'.\n2. Navegue até 'Todas as Configurações' e selecione 'Sistema'.\n3. Dentro de 'Cadastro', escolha a opção 'Usuários e Usuário API'.\n4. Selecione o perfil já existente (Wedrop) clique em gerar uma nova chave de API.\n5. Certifique-se de salvar as alterações e, em seguida, insira essa nova chave de API na integração do Bling no WeDrop."
+        },
+        {
+            "pergunta": "Verificar api key",
+            "resposta": "Por favor, verifique se sua integração com o Bling está válida.\n\nNo WeDrop, vá até 'Minhas Integrações'. Você verá a integração ERP (Bling). Clique em 'Editar' e, em seguida, na parte inferior, clique em 'Verificar'. Isso lhe retornará uma informação sobre a validade da integração."
+        },
+		{
+            "pergunta": "Como importar um pedido (consta no Bling)",
+            "resposta": "Vá na WeDrop:\n↳ “Meus Pedidos”\n1. Clique no símbolo da “Nuvem”.\n2. Você verá a data DE e ATÉ, coloque 5 dias antes em DE e o até deixe em hoje.\n\nPode clicar em “Procurar” e seu pedido será importado e estará em sua tela de Resumo Geral da WeDrop."
+        },
+		{
+            "pergunta": "Como importar um pedido (NÃO consta no Bling)",
+            "resposta": "Adicionar"
+        },
+        {
+            "pergunta": "Como atualizar o estoque do Bling?",
+            "resposta": "Vá na aba de catálogo depois clique no círculo com 3 pontos e coloque em tabela, depois selecione os produtos e clique no quadrado amarelo que vai aparecer, selecione o bling e na parte de enviar fotos coloque não e depois clique para confirmar isso vai fazer com que atualize todo o estoque dos produtos que selecionou, caso queira mandar somente os que vende clique no filtro e vá na parte de 'Por situação' e coloque 'somente o que vendo'."
+        },
+		{
+            "pergunta": "Como criar kits no Mercado Livre?",
+            "resposta": "Para criação de kits no Mercado Livre veja essas aulas com esses dois métodos\n\n1. https://grupo-full-commerce.circle.so/c/mercado-livre/kits-como-fazer-kits-usando-o-anuncio-rapido\n2. https://grupo-full-commerce.circle.so/c/mercado-livre/kits-como-fazer-kits-com-variacao-sem-anuncio-rapido-com-o-mapeador-de-anuncios"
+        },
+		{
+            "pergunta": "Como configurar o Flex?",
+            "resposta": "1. Vá em “Meu perfil”\n↳ “Vendas” >> “Preferências de Venda” >> “Mercado Envios Flex” >> “Configurações de Envio”.\n\n2. Nesse local você irá ativar colocar o horário de corte às 12h de segunda a sexta. Horários de Entrega você pode colocar de 13h às 21h\n\nATIVE TODAS AS ÁREAS DE ENTREGA."
+        },
+		{
+            "pergunta": "Venda sem estoque (Integração)",
+            "resposta": "Você pode verificar se no seu Bling consta estoque? Caso não, então a WeDrop fez o seu papel em zerar o estoque.\n\n1. Vá no Bling >> clique em carrinho Multiloja (ícone de carrinho de compras).\n2. Dentro do carrinho multiloja você irá clicar no marketplace desejado e verá se o ID NA LOJA está preenchido. Está?\n3. Então volte, selecione o produto clicando no quadrado e clique em SINCRONIZAR ESTOQUE NO SISTEMA que o certo é atualizar o estoque no marketplace.\n\nSe o ID NA LOJA não estiver preenchido é sinal que houve uma falha do Bling ou do vendedor no ato de exportar o anúncio e precisa ser corrigida urgentemente."
+        },
+		{
+            "pergunta": "Não recebi os 4 meses grátis do Bling",
+            "resposta": "Você precisará entrar em contato com o Bling via Ticket e pedir para que ativem o cupom fullcommerce04. Acesse esse link para ir direto ao suporte do Bling e clique em Abrir chamado.\n\nhttps://www.bling.com.br/contato"
+        },
+		{
+            "pergunta": "Alterar etiqueta ZPL Magalu",
+            "resposta": "Vá até o Bling:\n↳Pedido de vendas >> clique nos 3 pontinhos >> GERAR NOTA FISCAL.\n\n1. Com isso você emitirá a nota fiscal dessa venda para liberar a etiqueta de envio na Magalu.\n2. Vá até a Magalu >> clicará em Formato de etiqueta >> passará para Zebra (isso só precisa fazer na primeira venda).\n3. Agora bastará clicar em Baixar etiqueta.\n⇾ 1. Ir na wedrop em meus pedidos.\n⇾ 2. Clicar no símbolo de uma nuvem.\n⇾ 3. Clicar em “procurar” pra importar venda pra pagar e anexar a etiqueta"
+        },
+		
+		{
+            "pergunta": "Como emitir Nota Fiscal?",
+            "resposta": "Siga essa aula para aprender a gerar sua nota fiscal.\n\nhttps://youtu.be/lJJFl8TBDts"
+        },
+		{
+            "pergunta": "Como fazer o credenciamento no sefaz?",
+            "resposta": "Siga esse vídeo que vai te ajudar a fazer o credenciamento\n\n https://www.youtube.com/watch?v=xeReTI6_U8g&t=8s"
+        }
+    ]
+}

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte FAQ</title>
+
+<style>
+
+    /* Defina o background do corpo (body) com a cor #121212 */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Peso da fonte regular */
+	
+}
+
+
+a {
+    color: #005bb7; /* Substitua #FF0000 pela cor desejada em formato hexadecimal, RGB, ou nome da cor. */
+}
+
+/* Estilos para o menu */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #202024;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    margin-right: 20px;
+}
+
+li:last-child {
+    margin-right: 0;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #005bb7;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para o logotipo no menu */
+.logo-menu {
+    margin-left: 0; /* Define a margem esquerda como 0 para alinhar à esquerda */
+}
+
+/* Estilos para o título do FAQ */
+h1 {
+    font-size: 20px;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Estilos para o título das respostas */
+.TituloResposta {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFCA00;
+    font-family: 'Poppins semibold', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Estilos para os temas */
+h2 {
+    font-size: 18px; /* Tamanho da fonte para os temas */
+    color: #FFCA00;
+    margin-top: 20px; /* Espaço superior reduzido */
+    margin-bottom: 10px; /* Espaço inferior reduzido */
+    text-align: left; /* Alinhe o texto à esquerda */
+}
+
+/* Estilos para as perguntas */
+.pergunta {
+    position: left; /* Para permitir a posição da barra lateral */
+    padding-left: 5px; /* Aumente o espaço entre a borda e o texto e mova o texto para a direita */
+    border-left: 5px solid #FED714; /* Cor e largura da barra lateral */
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 300; /* Define a fonte como "thin" */
+    font-family: 'Poppins', sans-serif; /* Certifique-se de incluir a fonte Poppins */
+    color: white;
+    margin-top: 5px; /* Espaço superior reduzido */
+    margin-bottom: 0px; /* Espaço inferior reduzido */
+    text-align: left;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    line-height: 1.2;
+    box-sizing: border-box; /* Evita que o padding afete a largura total */
+    transition: color 0.3s; /* Adiciona uma transição suave à cor do texto */
+    display: inline-block; /* Alterado de "block" para "inline-block" */
+    max-width: fit-content; /* Define o tamanho máximo com base no conteúdo */
+    width: fit-content; /* Define a largura com base no conteúdo */
+}
+
+/* Adiciona espaço antes do texto da pergunta */
+.pergunta::before {
+    content: '\00a0'; /* Caractere de espaço em branco */
+    padding-right: 5px; /* Espaço entre o espaço em branco e o texto */
+	
+}
+
+/* Estilos ao passar o mouse sobre a pergunta */
+.pergunta:hover {
+    color: #FFCA00; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo quando a pergunta é clicada */
+.pergunta.clicada {
+    background-color: #FFCA00; /* Cor de fundo quando clicado */
+    color: #000000; /* Cor do texto quando clicado */
+    font-weight: bold; /* Peso da fonte em negrito quando clicado */
+    font-size: 1.0em; /* Tamanho da fonte maior quando clicado */
+    /* Outros estilos quando clicado */
+}
+
+/* Estilo para a classe texto-container */
+.texto-container {
+    white-space: pre-wrap; /* Isso permite a quebra de linha conforme necessário */
+    width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+}
+
+/* Estilo para os links quando são hover (mouse sobre eles) */
+.texto-container a:hover {
+    color: #0056b3; /* Cor desejada quando o mouse está sobre os links */
+}
+
+/* Estilo para a linha entre pergunta e resposta */
+.quebra-de-pagina {
+    page-break-after: always;
+}
+
+/* Estilos para as respostas */
+.resposta {
+    border-top-left-radius: 50%;
+    display: none;
+    font-size: 16px;
+    color: white;
+    font-family: 'Poppins Regular', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #202024;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.5); /* Sombra adicionada aqui */
+    width: 1000px;
+    max-width: 80%;
+    height: auto;
+    max-height: 80%;
+    overflow-y: auto;
+    padding: 30px;
+    text-align: left;
+    font-style: italic;
+    animation: float 1.5s infinite alternate ease-in-out;
+}
+
+/* Estilos para o botão "Fechar" dentro da resposta */
+.resposta .fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+/* Estilos para o botão "Copiar" dentro da resposta */
+.resposta .copiar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white; /* Cor padrão do ícone de "Copiar" */
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para o ícone de "Copiar" quando o botão está com a classe "copiado" */
+.resposta .copiar.copiado {
+    color: #FFCA00; /* Cor amarela quando o botão é clicado */
+}
+
+/* Estilos para o texto "Copiar" ao lado do botão */
+.resposta .copiar-texto {
+    margin-right: 5px;
+    color: white;
+}
+
+/* Estilos para o texto "Copiado" quando o botão é clicado */
+.resposta .copiado-texto {
+    display: none;
+    margin-left: 5px;
+    color: #FFCA00;
+}
+
+/* Estilos para tornar o botão "Fechar" visível quando a resposta está aberta */
+.resposta.visivel {
+    display: block;
+}
+
+/* Adicione a animação de movimento para cima e para baixo */
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -45%); /* Altere o valor para ajustar o movimento vertical */
+    }
+}
+#filtro-perguntas {
+    /* Adicione os estilos desejados para o botão de pesquisa aqui */
+    padding: 10px; /* Espaçamento interno para melhor aparência */
+    width: 200px; /* Defina a largura desejada em pixels ou outra unidade de medida */
+    height: 15px; /* Defina a altura desejada em pixels ou outra unidade de medida */
+    border: 1px solid #ccc; /* Borda fina ao redor do botão */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    font-family: 'Poppins regular', sans-serif;
+    background-color: #fff; /* Cor de fundo */
+    /* Outros estilos conforme necessário */
+}
+
+/* Estilo CSS para o botão "Limpar" */
+.botao-limpar {
+    background-color: #121212; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Muda o cursor ao passar o mouse sobre o botão */
+    font-size: 15px;
+    font-weight: 600; /* Define a fonte como "thin" */
+    font-family: 'Poppins', sans-serif; /* Certifique-se de incluir a fonte Poppins */
+    
+    /* Adicione margem à esquerda para mover o botão para a direita */
+    margin-left: 10px; /* Ajuste o valor conforme necessário */
+}
+
+/* Estilos para o campo de pesquisa */
+#campo-pesquisa {
+    padding: 10px; /* Espaçamento interno para melhor aparência */
+    width: 70%; /* Defina a largura desejada (70% da largura disponível) */
+    border: 1px solid #ccc; /* Borda fina ao redor do campo */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 18px; /* Tamanho da fonte ajustado para 18px */
+    color: #333; /* Cor do texto */
+    font-family: 'Poppins regular', sans-serif;
+    background-color: #fff; /* Cor de fundo */
+    margin-right: 10px; /* Espaço à direita para separar do botão */
+}
+
+/* Estilos para o botão "Pesquisar" */
+#formulario-consulta button[type="submit"] {
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 18px; /* Tamanho da fonte ajustado para 18px */
+    background-color: #FFCA00; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda */
+    border-radius: 0px; /* Borda arredondada */
+    cursor: pointer; /* Cursor do mouse de mãozinha ao passar sobre o botão */
+    font-family: 'Poppins regular', sans-serif;
+}
+
+/* Estilo para o botão "Pesquisar" quando hover (mouse sobre ele) */
+#formulario-consulta button[type="submit"]:hover {
+    background-color: #003f80; /* Cor de fundo alterada ao passar o mouse */
+}
+
+/* Estilos para o rótulo (label) */
+label[for="campo-pesquisa"] {
+    font-size: 18px; /* Ajuste o tamanho da fonte desejado, por exemplo, 18px */
+}
+
+/* Centralizar o campo de pesquisa e o botão "Pesquisar" na tela */
+#formulario-consulta {
+    text-align: center; /* Centralizar elementos internamente */
+    margin: 0 auto; /* Centralizar horizontalmente na tela */
+    max-width: 600px; /* Largura máxima para evitar que fiquem muito largos */
+}
+
+
+</style>
+
+
+    <!-- Adicione o link para o FontAwesome aqui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+<!-- Menu -->
+<ul>
+    <li class="logo-menu"><a href="/endpoint/faq"><img src="https://app.wedrop.com.br/wedrop_logo.svg" alt="Logo do WeDrop" width="160" height="30"></a></li>
+                <li><a href="/endpoint/faq">FAQ</a></li> <!-- Adicione o botão de voltar para a página /faq -->
+        <li><a href="/endpoint/consulta">Consultar api key</a></li> <!-- Adicione o botão de voltar para a página /faq -->
+        <li><a href="/endpoint/files">Documentos</a></li> <!-- Adicione o botão de voltar para a página /faq -->
+</ul>
+
+<!-- Conteúdo do Bling -->
+<h1>Scripts do suporte</h1>
+
+<!-- Campo de pesquisa -->
+<input type="text" id="filtro-perguntas" placeholder="Pesquisar...">
+<div style="height: 20px;"></div> <!-- Este div cria uma linha em branco de 20 pixels de altura -->
+<!-- Adicione mais perguntas e respostas conforme necessário -->
+
+
+<!-- Certifique-se de que há um elemento com o ID "faq-container" onde as perguntas e respostas devem ser inseridas -->
+<div id="faq-container"></div>
+
+<script>
+// Simulando dados de perguntas e respostas como se fossem de um arquivo JSON
+var faqData = {
+    "#Integração": [
+        {
+            "pergunta": "Limite Dimensões Correios",
+            "resposta": "Nesse caso, ultrapassa-se o limite de dimensão para envios na logística. É importante lembrar que os Correios têm uma altura máxima de 70 cm. Para envios maiores do que isso, é necessário possuir um CNPJ e ter a transportadora ativa no marketplace."
+        },
+        {
+            "pergunta": "Gerar nova api no Bling",
+            "resposta": "Siga os passos abaixo para gerar uma nova chave de API em sua conta Bling:\n1. Acesse a seção de configurações clicando na 'Engrenagem'.\n2. Navegue até 'Todas as Configurações' e selecione 'Sistema'.\n3. Dentro de 'Cadastro', escolha a opção 'Usuários e Usuário API'.\n4. Selecione o perfil já existente (Wedrop) clique em gerar uma nova chave de API.\n5. Certifique-se de salvar as alterações e, em seguida, insira essa nova chave de API na integração do Bling no WeDrop."
+        },
+        {
+            "pergunta": "Verificar api key",
+            "resposta": "Por favor, verifique se sua integração com o Bling está válida.\n\nNo WeDrop, vá até 'Minhas Integrações'. Você verá a integração ERP (Bling). Clique em 'Editar' e, em seguida, na parte inferior, clique em 'Verificar'. Isso lhe retornará uma informação sobre a validade da integração."
+        },
+		{
+            "pergunta": "Como importar um pedido (consta no Bling)",
+            "resposta": "Vá na WeDrop:\n↳ “Meus Pedidos”\n1. Clique no símbolo da “Nuvem”.\n2. Você verá a data DE e ATÉ, coloque 5 dias antes em DE e o até deixe em hoje.\n\nPode clicar em “Procurar” e seu pedido será importado e estará em sua tela de Resumo Geral da WeDrop."
+        },
+		{
+            "pergunta": "Como importar um pedido (NÃO consta no Bling)",
+            "resposta": "Adicionar"
+        },
+        {
+            "pergunta": "Como atualizar o estoque do Bling?",
+            "resposta": "Vá na aba de catálogo depois clique no círculo com 3 pontos e coloque em tabela, depois selecione os produtos e clique no quadrado amarelo que vai aparecer, selecione o bling e na parte de enviar fotos coloque não e depois clique para confirmar isso vai fazer com que atualize todo o estoque dos produtos que selecionou, caso queira mandar somente os que vende clique no filtro e vá na parte de 'Por situação' e coloque 'somente o que vendo'."
+        },
+		{
+            "pergunta": "Como criar kits no Mercado Livre?",
+            "resposta": "Para criação de kits no Mercado Livre veja essas aulas com esses dois métodos\n\n1. https://grupo-full-commerce.circle.so/c/mercado-livre/kits-como-fazer-kits-usando-o-anuncio-rapido\n2. https://grupo-full-commerce.circle.so/c/mercado-livre/kits-como-fazer-kits-com-variacao-sem-anuncio-rapido-com-o-mapeador-de-anuncios"
+        },
+		{
+            "pergunta": "Como configurar o Flex?",
+            "resposta": "1. Vá em “Meu perfil”\n↳ “Vendas” >> “Preferências de Venda” >> “Mercado Envios Flex” >> “Configurações de Envio”.\n\n2. Nesse local você irá ativar colocar o horário de corte às 12h de segunda a sexta. Horários de Entrega você pode colocar de 13h às 21h\n\nATIVE TODAS AS ÁREAS DE ENTREGA."
+        },
+		{
+            "pergunta": "Venda sem estoque (Integração)",
+            "resposta": "Você pode verificar se no seu Bling consta estoque? Caso não, então a WeDrop fez o seu papel em zerar o estoque.\n\n1. Vá no Bling >> clique em carrinho Multiloja (ícone de carrinho de compras).\n2. Dentro do carrinho multiloja você irá clicar no marketplace desejado e verá se o ID NA LOJA está preenchido. Está?\n3. Então volte, selecione o produto clicando no quadrado e clique em SINCRONIZAR ESTOQUE NO SISTEMA que o certo é atualizar o estoque no marketplace.\n\nSe o ID NA LOJA não estiver preenchido é sinal que houve uma falha do Bling ou do vendedor no ato de exportar o anúncio e precisa ser corrigida urgentemente."
+        },
+		{
+            "pergunta": "Não recebi os 4 meses grátis do Bling",
+            "resposta": "Você precisará entrar em contato com o Bling via Ticket e pedir para que ativem o cupom fullcommerce04. Acesse esse link para ir direto ao suporte do Bling e clique em Abrir chamado.\n\nhttps://www.bling.com.br/contato"
+        },
+		{
+            "pergunta": "Alterar etiqueta ZPL Magalu",
+            "resposta": "Vá até o Bling:\n↳Pedido de vendas >> clique nos 3 pontinhos >> GERAR NOTA FISCAL.\n\n1. Com isso você emitirá a nota fiscal dessa venda para liberar a etiqueta de envio na Magalu.\n2. Vá até a Magalu >> clicará em Formato de etiqueta >> passará para Zebra (isso só precisa fazer na primeira venda).\n3. Agora bastará clicar em Baixar etiqueta.\n⇾ 1. Ir na wedrop em meus pedidos.\n⇾ 2. Clicar no símbolo de uma nuvem.\n⇾ 3. Clicar em “procurar” pra importar venda pra pagar e anexar a etiqueta"
+        },
+		
+		{
+            "pergunta": "Como emitir Nota Fiscal?",
+            "resposta": "Siga essa aula para aprender a gerar sua nota fiscal.\n\nhttps://youtu.be/lJJFl8TBDts"
+        },
+		{
+            "pergunta": "Como fazer o credenciamento no sefaz?",
+            "resposta": "Siga esse vídeo que vai te ajudar a fazer o credenciamento\n\n https://www.youtube.com/watch?v=xeReTI6_U8g&t=8s"
+        }
+    ],
+    "#Pedidos": [
+        {
+            "pergunta": "Sobre o FULL",
+            "resposta": "Instruções para Realizar Pedidos no FULL da Wedrop:\n\n1. Preencha a planilha com os produtos desejados e suas respectivas quantidades. Você pode baixar a planilha [aqui](link da planilha).\n2. Envie a planilha preenchida para o e-mail: full@wedropbr.com.br.\n3. Um de nossos funcionários entrará em contato com você para confirmar a disponibilidade em estoque dos produtos escolhidos e orientá-lo sobre o processo de pagamento.\n4. Após a confirmação do pagamento, seus produtos serão separados e as dimensões das caixas serão calculadas.\n5. Com as informações das dimensões das caixas, você poderá solicitar a retirada das mercadorias junto ao marketplace.\n\nPara mais informações, <a href='https://seulink.com'>https://seulink.com</a>."
+        },
+		{
+            "pergunta": "Importar pedidos",
+            "resposta": "*No WeDrop:*\n1. Clique em 'Meus Pedidos'.\n2. Localize e clique no botão amarelo (ícone de nuvem com seta para baixo).\n3. Escolha a data da VENDA.\n4. Clique em 'Procurar'.\n\n⇾ Se você tentou importar manualmente no WeDrop e não encontrou o pedido:\n\n*No Bling:*\n1. Vá para 'VENDAS'.\n2. Selecione 'Pedidos de Venda'.\n3. Verifique se o seu pedido aparece lá.\n\n⇾ Se o pedido não estiver listado:\n\n*Ainda no Bling:*\n1. Vá para 'VENDAS'.\n2. Escolha 'Pedidos de Venda MULTILOJA'.\n3. Procure o seu pedido e clique em 'importar'.\n4. Após fazer isso, volte para o WeDrop e tente importar novamente.."
+        },
+		{
+            "pergunta": "Produto chegou quebrado",
+            "resposta": "Se o produto chegou quebrado, a responsabilidade será da transportadora. A WeDrop realiza uma conferência completa antes do envio do pedido, portanto, é comum ocorrer algum tipo de avaria durante o transporte. Como você está pagando por esse serviço, a transportadora deve cuidar do seu pedido. Portanto, recomendamos que você negocie com o cliente da maneira que achar melhor, mas depois entre em contato com a transportadora que você utilizou para ser ressarcido. Você enviou um produto em perfeito estado, e ele chegou danificado após o transporte."
+        },
+		{
+            "pergunta": "Baixar Nota Fiscal de entrada",
+            "resposta": "Se você precisa da nota fiscal e realizou a venda com CNPJ, você pode encontrar a nota no seu pedido. Siga estas etapas:\n\n1. Acesse o WeDrop.\n2. Vá para 'Meus Pedidos'.\n3. Encontre o pedido desejado e clique nos três pontos em amarelo.\n4. Faça o download da sua nota fiscal."
+        },
+		{
+            "pergunta": "Como rastrear pedido nos Correios",
+            "resposta": "Para rastrear o seu pedido dos Correios, siga estas etapas:\n\n1. Acesse o WeDrop.\n2. Vá para 'Meus Pedidos'.\n3. Encontre o pedido que deseja rastrear e clique nos três pontos em amarelo.\n4. Selecione a opção 'Ver Etiqueta'.\n5. Copie o código de rastreio.\n6. Acesse o site dos Correios e cole o código de rastreio na opção de rastreamento para verificar se a informação de postagem está disponível."
+        },
+		{
+            "pergunta": "Produto sem estoque",
+            "resposta": "Consultei o departamento responsável e, no momento, não temos o item em estoque. Posso ajudar com alguma outra coisa?"
+        },
+		{
+            "pergunta": "Problema pedido Flex",
+            "resposta": "Por gentileza, poderia compartilhar por favor um print da tela 'Detalhes do envio' com o nome do entregador?"
+        },
+		{
+            "pergunta": "Produto será enviado hoje",
+            "resposta": "Seu pedido será enviado hoje, tudo certo? Já verifiquei com o departamento responsável, e ele está no processo de envio. Basta aguardar as atualizações até o final do dia na plataforma. Precisa de alguma outra ajuda?"
+        },
+		{
+            "pergunta": "Consulta sobre devolução (recente)",
+            "resposta": "O processo de devolução não tem um prazo fixo e segue a ordem de chegada ao nosso galpão. Todas as devoluções são tratadas com igual importância, sem prioridades. O motivo da devolução não é considerado, apenas o processo em si, com atenção para evitar erros na conversão em saldo e na atualização do pedido.\n\nAguarde a atualização do seu processo de devolução na página do seu pedido. Estamos trabalhando para resolver tudo da melhor maneira possível. Se tiver dúvidas, entre em contato."
+        },
+		{
+            "pergunta": "Pedido não enviado (acima da medida ou peso)",
+            "resposta": "Pedido não enviado devido a peso ou medida acima do permitido. Após resolver essa questão com o seu marketplace, por favor, entre em contato com o suporte."
+		},
+		{
+            "pergunta": "Pedido não enviado (etiqueta cancelada)",
+            "resposta": "Pedido não enviado devido ao cancelamento da etiqueta. Por favor, verifique com o seu marketplace e, em seguida, entre em contato com o suporte."
+		},
+		{
+            "pergunta": "Pedido não enviado (fora das regras de serviço)",
+            "resposta": "Pedido não enviado devido a não conformidade com as regras de serviço. Por favor, resolva essa questão com o seu marketplace e, em seguida, entre em contato com o suporte."
+		},
+		{
+            "pergunta": "Como iniciar o processo de devolução",
+            "resposta": "Após o comprador postar o produto, obtenha o código de rastreamento, vá até o pedido correspondente no WeDrop, clique no botão amarelo e selecione 'Informar devolução'. Em seguida, preencha os dados e aguarde a devolução do produto, para que nossa equipe realize a verificação e análise do item devolvido. Você poderá acompanhar o histórico da devolução no próprio pedido. Caso a devolução esteja de acordo com as normas estabelecidas, o reembolso será creditado em saldo na carteira."
+        },
+		{
+            "pergunta": "Taxas da devolução por defeito de fábrica",
+            "resposta": "O frete é de responsabilidade do vendedor. No caso de defeito de fabricação, avaliamos o produto devolvido para determinar a causa, e não nos responsabilizamos por danos causados durante o transporte."
+		},
+		{
+            "pergunta": "Qual status do pedido após o pagamento?",
+            "resposta": "Após o pagamento do pedido, ele deve ser atualizado para o status 'Aguardando separação'. Se o status não corresponder a esse, é importante dar uma atenção especial à situação."
+        }
+		
+		
+		
+    ],
+    "#Regras": [
+        {
+            "pergunta": "Requisitos para uso de CNPJ",
+            "resposta": "Para utilizar o WeDrop com CNPJ, é fundamental observar as seguintes DIRETRIZES:\n\n1 - O CNPJ deve pertencer a uma empresa que possua um ENDEREÇO FISCAL LOCALIZADO NO ESTADO DE SÃO PAULO.\n2 - O CNPJ deve ser de uma empresa do SETOR DE COMÉRCIO VAREJISTA (empresas de serviços não estão autorizadas a utilizar o WeDrop).\n3 - Por favor, NÃO abrir uma empresa com o MESMO ENDEREÇO DO GALPÃO DO WEDROP.\n4 - É mandatório possuir uma INSCRIÇÃO ESTADUAL ativa e um CERTIFICADO DIGITAL.\n5 - Certifique-se de compreender as configurações necessárias e saber emitir uma NOTA FISCAL ELETRÔNICA (NFE) utilizando o sistema Bling.\n\nPara um guia detalhado sobre a configuração de CNPJ no Bling, consulte o link a seguir: <a href='https://ajuda.bling.com.br/hc/pt-br/articles/360034420894-Completar-os-dados-da-empresa'>https://ajuda.bling.com.br/hc/pt-br/articles/360034420894-Completar-os-dados-da-empresa</a>\nSiga cada passo representado pelas bolinhas verdes.\n\nImportante: Preencha corretamente seu CNPJ e INSCRIÇÃO ESTADUAL no Wedrop, pois informações imprecisas podem levar ao bloqueio da conta.\n\nCONTAS QUE NÃO SE ADEQUAREM A ESSAS REGRAS ESTARÃO SUJEITAS A BLOQUEIO E, EM CASO DE PERSISTÊNCIA, PODERÃO SER EXCLUÍDAS."
+			
+		},
+        {	
+        	"pergunta": "Política de Devolução",
+            "resposta": "#AVISO: O Wedrop não recebe nem se responsabiliza por compras entregues no Galpão.\n\n#ATENÇÃO:\n1. Compras particulares enviadas ao CD serão consideradas perdidas.\n2. Não iremos comprometer nossa eficiência logística, desviando o foco dos envios e devoluções da Wedrop para lidar com pedidos particulares de terceiros.\n\n✅ O WEDROP É EXCLUSIVAMENTE VOLTADO PARA O ENVIO E RECEBIMENTO DE VENDAS DE PRODUTOS DA PLATAFORMA."
+		}
+    ],
+	"#Marketplace": [
+        {
+            "pergunta": "Entrou para Shopee Xpress (o que muda?)",
+            "resposta": "Agora você faz parte da logística Shopee Xpress. Não é necessário realizar nenhuma modificação na integração. Lembrando que, após essa migração, caso seja vendedor(a) CNPJ se torna necessária a emissão e o envio da Nota Fiscal de saída após cada venda, de acordo com as diretrizes da Shopee."
+			
+		},
+		{
+            "pergunta": "Horário de corte Shopee",
+            "resposta": "O horário de corte para pagamento na Shopee é de segunda a sexta, até as 10:00h, e a etiqueta precisa estar no sistema até as 10:20h no máximo. Os pedidos feitos após esse horário na sexta-feira, assim como aos sábados e domingos, serão enviados apenas na segunda ou terça-feira."
+        },
+        {	
+        	"pergunta": "Dúvida 2",
+            "resposta": "Resposta 2."
+		}
+    ],
+	"#Financeiro": [
+        {
+            "pergunta": "Como solicitar reembolso em carteira",
+            "resposta": "Se você deseja prosseguir com o reembolso do valor em carteira, por favor, formalize a solicitação por e-mail para full.commerce@hotmail.com.\n\n⇾ Certifique-se de incluir as seguintes informações no e-mail:\n\n1. Seu e-mail associado à conta do WeDrop.\n2. Seu nome.\n3. O motivo pelo qual você está solicitando o reembolso."
+			
+		},
+        {	
+        	"pergunta": "Como solicitar reembolso do acesso",
+            "resposta": "1. Acesse a página de solicitação de reembolso [refund.hotmart.com];\n2. Digite o código da transação que pode ser conferido no e-mail com os detalhes de acesso ao produto;\n3. Digite o e-mail no qual você recebeu o link de acesso ao produto;\n4. Você receberá um e-mail com um código de segurança, digite-o no campo correto e clique em 'Avançar';\n5. Informe o motivo do pedido e preencha as informações complementares;\n6. Clique em 'Concluir'e aguarde o e-mail para confirmar seus dados  bancários."
+		},
+		{
+            "pergunta": "Como acompanhar status de reembolso",
+            "resposta": "O comprador pode acompanhar a solicitação de reembolso seguindo o passo a passo:\n\n1. Clique no link de acompanhamento de reembolso https://hotm.art/89LoxXG.\n2. Na tela que se abrir, insira o código da transação e o e-mail utilizado na compra nos campos indicados.\n3. Clique em 'Buscar'.\n4. O comprador receberá um código de verificação por email.\nEm seguida, insira o código de verificação no campo indicado.\n5. Por fim, verifique o status do reembolso."
+			
+		},
+		{
+            "pergunta": "Reembolso após 7 dias?",
+            "resposta": "O prazo para cancelamento ou desistência do nosso info produto é de 7 dias corridos após a data de inserção, conforme estabelecido pelo Art. 49 do Código de Defesa do Consumidor (CDC). O consumidor tem o direito de desistir do contrato no prazo de 7 dias a partir da sua assinatura ou do recebimento do produto ou serviço. Além disso, é possível cancelar apenas a renovação automática do próximo ano, seguindo o passo a passo fornecido no seguinte link: https://help.hotmart.com/pt-BR/article/como-cancelar-uma-assinatura/115002183968."
+			
+		}
+		
+	],
+	"#Dúvidas": [
+		
+		{
+            "pergunta": "Como funciona o WeDrop?",
+            "resposta": "A Wedrop é uma plataforma de vendas sem estoque, onde você se tornando membro tem acesso a mais de 1.000 produtos de diversos nichos e a PREÇO DE CUSTO DE IMPORTADOR.\n\nNosso mix de produtos é variado, com mais de 10 nichos como: Utilidades domésticas, Cama mesa e banho, Fitness, Bebes, Ferramentas e construção, Infantil, Mochilas, Escolar, Natalino, Pet, Verão, Volta as aulas e dentre outros… São mais de 1.000 produtos para você vender de maneira AUTOMATIZADA.\n\nAqui na Wedrop você consegue vender através dos principais Marketplaces como Mercado Livre, Shopee, Magalu, Amazon e dentre todos os outros existentes, além também, de conseguir integrar e vender através do seu site próprio, pela Shopify, Nuvemshop, Loja integrada e todas as plataformas que se conectam com o ERP BLING.\n\nNosso maior diferencial são os custos dos produtos, sendo abaixo dos concorrentes pelo fato de importarmos ou negociarmos diretamente com as fábricas, sendo assim, nossos membros tem LUCRO REAL em cima de cada venda e o poder de competir de igual para igual com os maiores vendedores nos Marketplaces.\n\nIntegrando a Wedrop, você tem a OPORTUNIDADE em vender através do nosso endereço em SP, ou seja, de qualquer lugar do pais você estará com seu negócio ativo e vendendo no MELHOR ESTADO para se vender online, pela questão logística e também pelo fato de poder enviar seus pedidos pelo Mercado Envios FLEX e seu cliente recebendo até no mesmo dia da compra dele.\n\nSão inúmeras as VANTAGENS de se tornar um membro WEDROP, vem fazer parte desse time também."
+			
+		},
+		{
+            "pergunta": "O que fazer no pós-venda",
+            "resposta": "Após realizar uma venda, você deve importar o pedido no WeDrop. Caso todas as configurações estejam corretas, clique no ícone da nuvem amarela na página 'Resumo'. Em seguida, adicione saldo à sua carteira, caso ainda não o tenha feito, e efetue o pagamento do produto, se estiver tudo correto. Nossa equipe ficará encarregada de separar e enviar o pedido para o seu comprador final."
+        },
+		{
+            "pergunta": "Uma conta só para o WeDrop no Mktplace",
+            "resposta": "A conta deve ser exclusiva para os produtos da WeDrop, pois o endereço do galpão deve ser informado como endereço de envio/devolução nos marketplaces."
+        },
+		{
+            "pergunta": "Qual a diferença de FUllcommerce e WeDrop?",
+            "resposta": "O acesso é agora unificado: ao entrar pela Wedrop, você terá direito a todo o ecossistema do Grupo Full Commerce. Isso inclui a capacidade de vender sem estoque, acesso às ferramentas, videoaulas, suporte e participação na comunidade de networking, entre outros benefícios. É importante destacar que o Grupo Full Commerce é a empresa proprietária da plataforma Wedrop, portanto, não há diferença entre eles."
+        },
+		{
+            "pergunta": "Consigo trocar e-mail de acesso?",
+            "resposta": "É importante observar que, antes de proceder com a alteração, você precisará entrar em contato com a Hotmart. É importante ter em mente que, caso você já tenha realizado alguma ação em sua conta no WeDrop, a alteração de e-mail resultará na perda de todos os dados associados à sua conta atual. Infelizmente, não há a opção de editar o e-mail diretamente; portanto, será necessário criar uma nova conta.\n\nSe você desejar prosseguir com a alteração mesmo assim, siga o passo a passo fornecido no seguinte link: https://help.hotmart.com/pt-br/article/como-alterar-o-meu-e-mail-de-acesso-ao-produto-/9370387188877. Após a aprovação da Hotmart, por favor, entre em contato conosco novamente para que possamos ajudá-lo na continuidade do processo."
+        },
+		{
+            "pergunta": "Realizei uma pesquisa no Reclame Aqui",
+            "resposta": "É importante ressaltar que, considerando nosso grupo com mais de 12.000 membros, o número de reclamações é bastante limitado, totalizando apenas 60. Isso representa exatamente 0,5% de insatisfação em relação ao total de membros. Estamos constantemente trabalhando para melhorar nossos serviços e garantir a satisfação de nossos usuários."
+        },
+		{
+            "pergunta": "Como é feito o pagamento dos produtos?",
+            "resposta": "Você adiciona saldo à sua conta na Wedrop. Esse saldo pode ser inserido por meio de duas opções: PIX ou cartão de crédito. Após o saldo estar disponível em sua carteira, todos os custos dos produtos que você vender serão automaticamente deduzidos desse saldo. Isso oferece uma maneira conveniente e flexível de gerenciar suas transações e garantir que os custos dos produtos sejam cobertos de forma eficiente."
+        },
+		{
+            "pergunta": "Sou MEI Não Quero/Consigo emitir Nota Fiscal",
+            "resposta": "Vá até o WeDrop:\n↳ 'Minhas Integrações' > 'Bling'\n2. (Clique em EDITAR)\n3. Troque de pessoa jurídica para física.\n\nIsso fará sua conta ser vista como CPF na WeDrop e liberará pro pedido ir sem emitir nota, mas só funcionará se o marketplace não obrigar que emita a nota."
+        },
+		{
+			
+            "pergunta": "Contabilidade Indicada (Contato)",
+            "resposta": "Contabilidade Indicada.\n(FS CONTÁBIL)\n\nWhatsApp ⇾ (11) 96785-0173\nE-mail ⇾ clientes.wedrop@fscont.com.br\nSegunda à Sexta das 08h as 17h."
+        },
+		{
+            "pergunta": "Quantas contas posso integrar no WeDrop?",
+            "resposta": "O WeDrop suporta até duas (2) contas de cada Marketplace ou plataforma."
+        },
+		{
+            "pergunta": "Vocês emitem Nota Fiscal para o meu cliente?",
+            "resposta": "O vendedor deve sempre emitir a nota fiscal para o cliente final. A WeDrop emite a nota fiscal de entrada apenas para membros vendedores com CNPJ. No caso de vendas realizadas com CPF, não há emissão de notas fiscais, e os produtos são enviados juntamente com a declaração de conteúdo."
+        },
+		{
+            "pergunta": "Como é feito a atualização de estoque?",
+            "resposta": "A atualização de estoque é realizada de forma automática. É importante ressaltar que para que esse processo ocorra sem problemas, é necessário configurar e integrar todas as configurações corretamente. Dessa forma, o sistema garantirá que as informações de estoque sejam atualizadas de maneira precisa e eficiente, refletindo com precisão a disponibilidade de produtos em seu sistema."
+        },
+		{
+            "pergunta": "Contabilidade Indicada (Valores)",
+            "resposta": "Serviços Contábeis: R$249 por mês.\nServiços Contábeis + Endereço Fiscal: R$299 por mês.\nTaxa de abertura de Empresa: R$200"
+        }
+	
+		        
+    ]
+};
+
+// Função para exibir as perguntas e respostas no documento
+function displayQuestionsAndAnswers(data) {
+    var faqContainer = document.getElementById('faq-container');
+
+    for (var moduleTitle in data) {
+        if (data.hasOwnProperty(moduleTitle)) {
+            var moduleData = data[moduleTitle];
+
+            var moduleTitleElement = document.createElement('h2');
+            moduleTitleElement.textContent = moduleTitle;
+            faqContainer.appendChild(moduleTitleElement);
+
+            for (var i = 0; i < moduleData.length; i++) {
+                var pergunta = moduleData[i].pergunta;
+                var resposta = moduleData[i].resposta;
+
+                var perguntaElement = document.createElement('h3');
+                perguntaElement.classList.add('pergunta');
+                perguntaElement.textContent = pergunta;
+
+                var respostaElement = document.createElement('div');
+                respostaElement.classList.add('resposta');
+
+                var textoContainer = document.createElement('div');
+                textoContainer.classList.add('texto-container');
+
+                var textoSimples = document.createElement('p');
+                textoSimples.innerHTML = resposta;
+
+                textoContainer.appendChild(textoSimples);
+                respostaElement.appendChild(textoContainer);
+
+                var tituloElement = document.createElement('h4');
+                tituloElement.classList.add('TituloResposta');
+                tituloElement.textContent = '(' + pergunta + ')';
+                respostaElement.insertBefore(tituloElement, respostaElement.firstChild);
+
+                var fecharElement = document.createElement('span');
+                fecharElement.classList.add('fechar');
+                fecharElement.innerHTML = '<i class="fas fa-times"></i>';
+                fecharElement.onclick = function () {
+                    closeAnswer(this.parentElement);
+                    var perguntaClicada = this.parentElement.previousElementSibling;
+                    perguntaClicada.classList.remove('clicada');
+                    perguntaClicada.style.backgroundColor = '';
+                    perguntaClicada.style.color = '#ffffff';
+                };
+                respostaElement.appendChild(fecharElement);
+
+                var copiarButton = document.createElement('button');
+                copiarButton.classList.add('copiar');
+                copiarButton.innerHTML = '<i class="far fa-copy"></i>';
+                copiarButton.onclick = function () {
+                    copiarResposta(this.parentElement, this);
+                };
+                respostaElement.appendChild(copiarButton);
+
+                var copiadoTexto = document.createElement('span');
+                copiadoTexto.classList.add('copiado-texto');
+                respostaElement.appendChild(copiadoTexto);
+
+                faqContainer.appendChild(perguntaElement);
+                faqContainer.appendChild(respostaElement);
+
+                var quebraDePagina = document.createElement('div');
+                quebraDePagina.classList.add('quebra-de-pagina');
+                faqContainer.appendChild(quebraDePagina);
+            }
+        }
+    }
+
+    // Evento de clique para mostrar/ocultar a resposta ao clicar na pergunta
+    var perguntas = document.querySelectorAll('.pergunta');
+    perguntas.forEach(function (pergunta) {
+        pergunta.addEventListener('click', function () {
+            toggleAnswer(this.nextElementSibling);
+
+            perguntas.forEach(function (outraPergunta) {
+                if (outraPergunta !== this) {
+                    outraPergunta.classList.remove('clicada');
+                    outraPergunta.style.backgroundColor = '';
+                    outraPergunta.style.color = '#ffffff';
+                }
+            });
+
+            this.classList.toggle('clicada');
+            this.style.backgroundColor = this.classList.contains('clicada') ? '#FFCA00' : '';
+            this.style.color = this.classList.contains('clicada') ? '#000000' : '#ffffff';
+        });
+    });
+}
+
+// Função para alternar a exibição da resposta
+function toggleAnswer(element) {
+    var respostas = document.querySelectorAll('.resposta');
+
+    respostas.forEach(function (resposta) {
+        resposta.style.display = 'none';
+        resposta.style.opacity = '1';
+    });
+
+    if (element.style.display === 'block') {
+        element.style.display = 'none';
+    } else {
+        element.style.display = 'block';
+    }
+}
+
+// Função para fechar a resposta
+function closeAnswer(element) {
+    element.style.display = 'none';
+}
+
+// Função para copiar o texto da resposta
+function copiarResposta(element, button) {
+    var texto = element.querySelector('.texto-container p').textContent;
+    var textarea = document.createElement('textarea');
+    textarea.value = texto;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    button.querySelector('.copiado-texto').textContent = 'Copiado!';
+}
+
+// Chame a função para exibir as perguntas e respostas no documento
+displayQuestionsAndAnswers(faqData);
+
+</script>
+
+
+<script>
+// Função para copiar o conteúdo da resposta (excluindo o título)
+function copiarResposta(respostaElement, copiarButton) {
+    // Clona o elemento de resposta para manter o estilo
+    var respostaClone = respostaElement.cloneNode(true);
+
+    // Remove o título da resposta do clone
+    var tituloResposta = respostaClone.querySelector('.TituloResposta');
+    if (tituloResposta) {
+        tituloResposta.remove();
+    }
+
+    // Aplica estilos ao clone
+    respostaClone.style.display = 'block';
+    respostaClone.style.position = 'static';
+
+    // Cria um novo elemento temporário para copiar o texto formatado
+    var tempTextArea = document.createElement('textarea');
+    tempTextArea.value = respostaClone.textContent;
+    document.body.appendChild(tempTextArea);
+
+    tempTextArea.select();
+    document.execCommand('copy');
+
+    document.body.removeChild(tempTextArea);
+
+    // Altera o texto do botão para "Copiado ✔️"
+    copiarButton.innerHTML = '<i class="far fa-check-circle"></i>'; // Ícone de verificação
+
+    // Adicione uma classe CSS para aplicar o efeito no ícone de copiar
+    copiarButton.classList.add('copiado');
+
+    // Configure um temporizador para remover a classe e reverter o texto após um período de tempo
+    setTimeout(function () {
+        copiarButton.innerHTML = '<i class="far fa-copy"></i>'; // Ícone de copiar
+        copiarButton.classList.remove('copiado');
+        copiarButton.style.color = '#ffffff'; // Reverte a cor para a cor padrão
+    }, 1000); // Isso removerá a classe 'copiado' e reverterá o texto após 1 segundo (você pode ajustar o tempo conforme necessário)
+}
+
+// Função para exibir as perguntas e respostas do arquivo JSON
+function loadQuestionsAndAnswers() {
+    fetch('faq-data.json')
+        .then(response => response.json())
+        .then(data => {
+            displayQuestionsAndAnswers(data);
+        })
+        .catch(error => console.error('Erro ao carregar os dados: ', error));
+}
+
+// Função para exibir as perguntas e respostas no documento com títulos de módulo
+function displayQuestionsAndAnswers(data) {
+    var faqContainer = document.createElement('div');
+    faqContainer.id = 'faq-container';
+
+    for (var moduleTitle in data) {
+        if (data.hasOwnProperty(moduleTitle)) {
+            var moduleData = data[moduleTitle];
+
+            var moduleTitleElement = document.createElement('h2');
+            moduleTitleElement.textContent = moduleTitle;
+            faqContainer.appendChild(moduleTitleElement);
+
+            for (var i = 0; i < moduleData.length; i++) {
+                var pergunta = moduleData[i].pergunta;
+                var resposta = moduleData[i].resposta;
+
+                var perguntaElement = document.createElement('h3');
+                perguntaElement.classList.add('pergunta');
+                perguntaElement.textContent = pergunta;
+
+                var respostaElement = document.createElement('div');
+                respostaElement.classList.add('resposta');
+                respostaElement.classList.add('animate-background'); // Adicione a classe animate-background
+
+                // Use a tag <div> para envolver o texto e aplicar um estilo específico
+                var textoContainer = document.createElement('div');
+                textoContainer.classList.add('texto-container');
+
+                // Converta o texto da resposta em texto simples
+                var textoSimples = document.createElement('p');
+                textoSimples.innerHTML = resposta;
+
+                textoContainer.appendChild(textoSimples);
+                respostaElement.appendChild(textoContainer);
+
+                // Cria e define o título da resposta com parênteses ao redor do conteúdo da pergunta clicada
+                var tituloElement = document.createElement('h4');
+                tituloElement.classList.add('TituloResposta');
+                tituloElement.textContent = '(' + pergunta + ')'; // Adiciona parênteses ao redor do texto da pergunta
+
+                respostaElement.insertBefore(tituloElement, respostaElement.firstChild); // Adicione o título acima da resposta
+
+                // Adiciona o botão "Fechar" na resposta
+                var fecharElement = document.createElement('span');
+                fecharElement.classList.add('fechar');
+                fecharElement.innerHTML = '<i class="fas fa-times"></i>'; // Ícone de fechar
+                fecharElement.onclick = function () {
+                    closeAnswer(this.parentElement);
+                    // Encontre a pergunta correspondente e remova a classe "clicada"
+                    var perguntaClicada = this.parentElement.previousElementSibling;
+                    perguntaClicada.classList.remove('clicada');
+                    perguntaClicada.style.backgroundColor = ''; // Remove o fundo da pergunta fechada
+                    perguntaClicada.style.color = '#ffffff'; // Reverte a cor da fonte da pergunta fechada
+                };
+                respostaElement.appendChild(fecharElement);
+
+                // Adiciona o botão "Copiar" na resposta
+                var copiarButton = document.createElement('button');
+                copiarButton.classList.add('copiar');
+                copiarButton.innerHTML = '<i class="far fa-copy"></i>'; // Ícone de copiar
+                copiarButton.onclick = function () {
+                    copiarResposta(this.parentElement, this);
+                };
+                respostaElement.appendChild(copiarButton);
+
+                // Adiciona o texto "Copiado ✔️" após o botão "Copiar" (inicialmente oculto)
+                var copiadoTexto = document.createElement('span');
+                copiadoTexto.classList.add('copiado-texto');
+
+                respostaElement.appendChild(copiadoTexto);
+
+                faqContainer.appendChild(perguntaElement);
+                faqContainer.appendChild(respostaElement);
+
+                // Adicione uma quebra de página após cada resposta
+                var quebraDePagina = document.createElement('div');
+                quebraDePagina.classList.add('quebra-de-pagina');
+                faqContainer.appendChild(quebraDePagina);
+            }
+        }
+    }
+
+    document.body.appendChild(faqContainer);
+
+    // Evento de clique para mostrar/ocultar a resposta ao clicar na pergunta
+    var perguntas = document.querySelectorAll('.pergunta');
+    perguntas.forEach(function (pergunta) {
+        pergunta.addEventListener('click', function () {
+            toggleAnswer(this.nextElementSibling);
+
+            // Fecha todas as outras respostas e remove a classe "clicada" das outras perguntas
+            perguntas.forEach(function (outraPergunta) {
+                if (outraPergunta !== this) {
+                    outraPergunta.classList.remove('clicada');
+                    outraPergunta.style.backgroundColor = ''; // Remove o fundo das outras perguntas
+                    outraPergunta.style.color = '#ffffff'; // Reverte a cor da fonte das outras perguntas
+                }
+            });
+
+            this.classList.toggle('clicada'); // Adiciona ou remove a classe "clicada" na pergunta clicada
+            this.style.backgroundColor = this.classList.contains('clicada') ? '#FFCA00' : ''; // Define o background da pergunta clicada
+            this.style.color = this.classList.contains('clicada') ? '#000000' : '#ffffff'; // Muda a cor da fonte da pergunta clicada
+        });
+    });
+}
+
+// Função para alternar a exibição da resposta
+function toggleAnswer(element) {
+    var respostas = document.querySelectorAll('.resposta');
+
+    respostas.forEach(function (resposta) {
+        resposta.style.display = 'none';
+        resposta.style.opacity = '1'; // Reverte a opacidade para 1 ao alternar a resposta
+    });
+
+    if (element.style.display === 'block') {
+        element.style.display = 'none';
+    } else {
+        element.style.display = 'block';
+    }
+}
+
+// Função para fechar uma resposta com efeito de transparência
+function closeAnswer(resposta) {
+    var opacity = 1;
+    var interval = setInterval(function () {
+
+        resposta.style.opacity = opacity;
+        opacity -= 0.1; // Reduz a opacidade em 0.1 a cada intervalo
+        if (opacity <= 0) {
+            clearInterval(interval); // Para o intervalo quando a opacidade chegar a 0
+            resposta.style.display = 'none'; // Define a resposta como oculta
+            var perguntas = document.querySelectorAll('.pergunta');
+            perguntas.forEach(function (pergunta) {
+                pergunta.style.backgroundColor = ''; // Remove o fundo da pergunta fechada
+                pergunta.style.color = '#ffffff'; // Reverte a cor da fonte da pergunta fechada
+            });
+        }
+    }, 50); // Intervalo de 50ms para a transição de opacidade (você pode ajustar conforme necessário)
+}
+
+// Seletor para o campo de pesquisa
+var campoPesquisa = document.getElementById('filtro-perguntas');
+
+// Evento de digitação no campo de pesquisa
+campoPesquisa.addEventListener('input', function () {
+    var textoPesquisa = campoPesquisa.value.toLowerCase(); // Obtém o texto digitado em letras minúsculas
+    filtrarPerguntas(textoPesquisa); // Chama a função de filtro de perguntas
+});
+
+// Função para filtrar perguntas com base no texto de pesquisa
+function filtrarPerguntas(textoPesquisa) {
+    var perguntas = document.querySelectorAll('.pergunta');
+    perguntas.forEach(function (pergunta) {
+        var perguntaTexto = pergunta.textContent.toLowerCase();
+        if (perguntaTexto.includes(textoPesquisa)) {
+            pergunta.style.display = 'block'; // Mostra a pergunta se corresponder ao filtro
+        } else {
+            pergunta.style.display = 'none'; // Oculta a pergunta se não corresponder ao filtro
+        }
+    });
+}
+
+// Função para criar e adicionar o botão "Limpar" à caixa de pesquisa
+function adicionarBotaoLimpar() {
+    // Crie o botão "Limpar"
+    var botaoLimpar = document.createElement('button');
+    botaoLimpar.textContent = 'Limpar';
+    
+    // Adicione a classe CSS ao botão "Limpar"
+    botaoLimpar.classList.add('botao-limpar');
+    
+    // Adicione um evento de clique ao botão para limpar o campo de pesquisa
+    botaoLimpar.addEventListener('click', function () {
+        campoPesquisa.value = ''; // Limpa o campo de pesquisa
+        filtrarPerguntas(''); // Chama a função de filtro com uma string vazia para exibir todas as perguntas novamente
+    });
+    
+    // Adicione o botão "Limpar" à caixa de pesquisa
+    var campoPesquisa = document.getElementById('filtro-perguntas');
+    campoPesquisa.parentNode.insertBefore(botaoLimpar, campoPesquisa.nextSibling);
+}
+
+// Chame a função para adicionar o botão "Limpar"
+adicionarBotaoLimpar();
+
+// Chamar a função para carregar as perguntas e respostas ao carregar a página
+window.onload = loadQuestionsAndAnswers;
+
+</script>
+</body>
+</html>

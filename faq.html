@@ -10,9 +10,11 @@
 </head>
 <body>
     
-<!-- Menu -->
 <ul>
-    <li class="logo-menu"><a href="faq.html"><img src="img/wedroplogo.svg" alt="Logo do WeDrop" width="160" height="30"></a></li>
+    <li class="logo-menu"><a href="faq.html"><img src="https://app.wedrop.com.br/wedrop_logo.svg" alt="Logo do WeDrop" width="160" height="30"></a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="consulta.html">Consultar api key</a></li>
+    <li><a href="files.html">Documentos</a></li>
 </ul>
 
 <!-- Conteúdo do Bling -->
@@ -20,8 +22,31 @@
 
 <!-- Campo de pesquisa -->
 <input type="text" id="filtro-perguntas" placeholder="Pesquisar...">
-<div style="height: 20px;"></div> <!-- Este div cria uma linha em branco de 20 pixels de altura -->
-<!-- Adicione mais perguntas e respostas conforme necessário -->
+<div style="height: 20px;">
+	<button id="botao-voz"><i class="fas fa-microphone"></i></button></div>
+
+
+
+<!-- Container para faq-integracao.json -->
+<div id="faq-integracao-container"></div>
+
+<!-- Container para faq-pedidos.json -->
+<div id="faq-pedidos-container"></div>
+
+<!-- Container para o terceiro arquivo JSON (nome genérico) -->
+<div id="faq-terceiro-container"></div>
+
+<!-- Container para o quarto arquivo JSON (nome genérico) -->
+<div id="faq-quarto-container"></div>
+
+<!-- Container para o quinto arquivo JSON (nome genérico) -->
+<div id="faq-quinto-container"></div>
+
+<!-- Container para o sexto arquivo JSON (nome genérico) -->
+<div id="faq-sexto-container"></div>
+
 <script src="script.js"></script>
+<script src="scriptvoz.js"></script> <!-- Inclua o novo arquivo scriptvoz.js após o script principal -->
+
 </body>
 </html>

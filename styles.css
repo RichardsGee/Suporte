@@ -290,4 +290,153 @@ label[for="campo-pesquisa"] {
     max-width: 600px; /* Largura máxima para evitar que fiquem muito largos */
 }
 
+/* Estilos para a tabela de arquivos */
+.file-table {
+    width: 80%; /* Define a largura da tabela, você pode ajustar conforme necessário */
+    margin: 0 auto; /* Centraliza a tabela horizontalmente na tela */
+    border-collapse: collapse; /* Combina as bordas das células da tabela */
+    margin-top: 20px; /* Espaço superior para separar do campo de pesquisa */
+}
+
+/* Estilos para as células da tabela */
+.file-table th, .file-table td {
+    border: 1px solid #ccc; /* Adiciona bordas a todas as células da tabela */
+    padding: 10px; /* Espaçamento interno das células */
+    text-align: center; /* Centraliza o conteúdo nas células */
+}
+
+/* Estilos para o cabeçalho da tabela */
+.file-table th {
+    background-color: #202024; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    font-weight: bold; /* Texto em negrito no cabeçalho */
+}
+
+/* Estilos para as linhas pares da tabela (para alternar cores de fundo) */
+.file-table tbody tr:nth-child(even) {
+    background-color: #202024; /* Cor de fundo das linhas pares */
+}
+
+/* Estilos para as células de ícone na tabela */
+.file-table img {
+    display: block; /* Garante que as imagens fiquem centralizadas verticalmente */
+    margin: 0 auto; /* Centraliza as imagens horizontalmente nas células */
+}
+/* Estilos para o botão de cópia na tabela */
+.copiar-button {
+    background-color: #007bff; /* Cor de fundo do botão de cópia */
+    color: white; /* Cor do texto do botão de cópia */
+    padding: 5px 10px; /* Espaçamento interno do botão de cópia */
+    border: none; /* Remove a borda do botão de cópia */
+    cursor: pointer; /* Altera o cursor do mouse ao passar sobre o botão de cópia */
+    font-size: 14px; /* Tamanho da fonte do botão de cópia */
+    font-weight: bold; /* Texto em negrito no botão de cópia */
+}
+
+/* Estilos para o botão de cópia quando hover (mouse sobre ele) */
+.copiar-button:hover {
+    background-color: #0056b3; /* Cor de fundo alterada ao passar o mouse sobre o botão de cópia */
+}
+
+/* Estilo para o campo de pesquisa */
+#pesquisar-files {
+    /* Adicione os estilos desejados para o campo de pesquisa aqui */
+    padding: 10px; /* Espaçamento interno para melhor aparência */
+    width: 200px; /* Defina a largura desejada em pixels ou outra unidade de medida */
+    height: 15px; /* Defina a altura desejada em pixels ou outra unidade de medida */
+    border: 1px solid #ccc; /* Borda fina ao redor do campo de pesquisa */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    font-family: 'Poppins regular', sans-serif;
+    background-color: #fff; /* Cor de fundo */
+    /* Outros estilos conforme necessário */
+
+    /* Centralizar horizontalmente na tela */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+/* Estilo para o botão "Limpar" */
+#limpar-pesquisa {
+    background-color: #121212; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Muda o cursor ao passar o mouse sobre o botão */
+    font-size: 15px;
+    font-weight: 600; /* Define a fonte como "thin" */
+    font-family: 'Poppins', sans-serif; /* Certifique-se de incluir a fonte Poppins */
+    
+    /* Adicione margem à esquerda para mover o botão para a direita */
+	/* Centralizar horizontalmente na tela */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 150px; /* Ajuste o valor conforme necessário */
+}
+/* Estilos para o container FAQ Integracao */
+#faq-integracao-container {
+    float: left;
+    width: calc(33.33% - 20px); /* Divide a tela em 1/3 para cada container e subtrai 20px de margem */
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: auto;
+    margin-right: 20px; /* Margem direita entre os containers */
+}
+
+/* Estilos para o container FAQ Pedidos */
+#faq-pedidos-container {
+    float: left;
+    width: calc(33.33% - 20px); /* Divide a tela em 1/3 para cada container e subtrai 20px de margem */
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: auto;
+    margin-right: 20px; /* Margem direita entre os containers */
+}
+
+/* Estilos para um terceiro container (adicione um ID específico para o terceiro container) */
+#faq-terceiro-container {
+    float: left;
+    width: calc(33.33% - 20px); /* Divide a tela em 1/3 para cada container e subtrai 20px de margem */
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Estilos para o container do quarto arquivo JSON (nome genérico) */
+#faq-quarto-container {
+    float: left;
+    width: calc(33.33% - 20px); /* Divide a tela em 1/3 para cada container e subtrai 20px de margem */
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: auto;
+    margin-right: 20px; /* Margem direita entre os containers */
+}
+
+/* Estilos para o container do quinto arquivo JSON (nome genérico) */
+#faq-quinto-container {
+    float: left;
+    width: calc(33.33% - 20px); /* Divide a tela em 1/3 para cada container e subtrai 20px de margem */
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: auto;
+    margin-right: 20px; /* Margem direita entre os containers */
+}
+
+/* Estilos para o container do sexto arquivo JSON (nome genérico) */
+#faq-sexto-container {
+    float: left;
+    width: calc(33.33% - 20px); /* Divide a tela em 1/3 para cada container e subtrai 20px de margem */
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+
+
 

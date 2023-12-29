@@ -1,0 +1,24 @@
+{
+    "#Financeiro": [
+        {
+            "pergunta": "Como solicitar reembolso em carteira",
+            "resposta": "Se você deseja prosseguir com o reembolso do valor em carteira, por favor, formalize a solicitação por e-mail para full.commerce@hotmail.com.\n\n⇾ Certifique-se de incluir as seguintes informações no e-mail:\n\n1. Seu e-mail associado à conta do WeDrop.\n2. Seu nome.\n3. O motivo pelo qual você está solicitando o reembolso."
+			
+		},
+        {	
+        	"pergunta": "Como solicitar reembolso do acesso",
+            "resposta": "1. Acesse a página de solicitação de reembolso [refund.hotmart.com];\n2. Digite o código da transação que pode ser conferido no e-mail com os detalhes de acesso ao produto;\n3. Digite o e-mail no qual você recebeu o link de acesso ao produto;\n4. Você receberá um e-mail com um código de segurança, digite-o no campo correto e clique em 'Avançar';\n5. Informe o motivo do pedido e preencha as informações complementares;\n6. Clique em 'Concluir'e aguarde o e-mail para confirmar seus dados  bancários."
+		},
+		{
+            "pergunta": "Como acompanhar status de reembolso",
+            "resposta": "O comprador pode acompanhar a solicitação de reembolso seguindo o passo a passo:\n\n1. Clique no link de acompanhamento de reembolso https://hotm.art/89LoxXG.\n2. Na tela que se abrir, insira o código da transação e o e-mail utilizado na compra nos campos indicados.\n3. Clique em 'Buscar'.\n4. O comprador receberá um código de verificação por email.\nEm seguida, insira o código de verificação no campo indicado.\n5. Por fim, verifique o status do reembolso."
+			
+		},
+		{
+            "pergunta": "Reembolso após 7 dias?",
+            "resposta": "O prazo para cancelamento ou desistência do nosso info produto é de 7 dias corridos após a data de inserção, conforme estabelecido pelo Art. 49 do Código de Defesa do Consumidor (CDC). O consumidor tem o direito de desistir do contrato no prazo de 7 dias a partir da sua assinatura ou do recebimento do produto ou serviço. Além disso, é possível cancelar apenas a renovação automática do próximo ano, seguindo o passo a passo fornecido no seguinte link: https://help.hotmart.com/pt-BR/article/como-cancelar-uma-assinatura/115002183968."
+			
+		}
+		
+	]
+}

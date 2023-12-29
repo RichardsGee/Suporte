@@ -45,7 +45,12 @@
 		{
             "pergunta": "Como iniciar o processo de devolução",
             "resposta": "Após o comprador postar o produto, obtenha o código de rastreamento, vá até o pedido correspondente no WeDrop, clique no botão amarelo e selecione 'Informar devolução'. Em seguida, preencha os dados e aguarde a devolução do produto, para que nossa equipe realize a verificação e análise do item devolvido. Você poderá acompanhar o histórico da devolução no próprio pedido. Caso a devolução esteja de acordo com as normas estabelecidas, o reembolso será creditado em saldo na carteira."
+        },
+		{
+            "pergunta": "Qual status do pedido após o pagamento?",
+            "resposta": "Após o pagamento do pedido, ele deve ser atualizado para o status 'Aguardando separação'. Se o status não corresponder a esse, é importante dar uma atenção especial à situação."
         }
+		
 		
     ],
     "#Regras": [
@@ -72,22 +77,34 @@
     ],
 	"#Financeiro": [
         {
-            "pergunta": "Reembolso em carteira",
+            "pergunta": "Como solicitar reembolso em carteira",
             "resposta": "Se você deseja prosseguir com o reembolso do valor em carteira, por favor, formalize a solicitação por e-mail para full.commerce@hotmail.com.\n\n⇾ Certifique-se de incluir as seguintes informações no e-mail:\n\n1. Seu e-mail associado à conta do WeDrop.\n2. Seu nome.\n3. O motivo pelo qual você está solicitando o reembolso."
 			
 		},
         {	
-        	"pergunta": "Dúvida 2",
-            "resposta": "Resposta 2."
-		}
-	],
-	"#Dúvidas": [
-        {
-            "pergunta": "Reembolso em carteira",
-            "resposta": "Se você deseja prosseguir com o reembolso do valor em carteira, por favor, formalize a solicitação por e-mail para full.commerce@hotmail.com.\n\n⇾ Certifique-se de incluir as seguintes informações no e-mail:\n\n1. Seu e-mail associado à conta do WeDrop.\n2. Seu nome.\n3. O motivo pelo qual você está solicitando o reembolso."
+        	"pergunta": "Como solicitar reembolso do acesso",
+            "resposta": "1. Acesse a página de solicitação de reembolso [refund.hotmart.com];\n2. Digite o código da transação que pode ser conferido no e-mail com os detalhes de acesso ao produto;\n3. Digite o e-mail no qual você recebeu o link de acesso ao produto;\n4. Você receberá um e-mail com um código de segurança, digite-o no campo correto e clique em 'Avançar';\n5. Informe o motivo do pedido e preencha as informações complementares;\n6. Clique em 'Concluir'e aguarde o e-mail para confirmar seus dados  bancários."
+		},
+		{
+            "pergunta": "Como acompanhar status de reembolso",
+            "resposta": "O comprador pode acompanhar a solicitação de reembolso seguindo o passo a passo:\n\n1. Clique no link de acompanhamento de reembolso https://hotm.art/89LoxXG.\n2. Na tela que se abrir, insira o código da transação e o e-mail utilizado na compra nos campos indicados.\n3. Clique em 'Buscar'.\n4. O comprador receberá um código de verificação por email.\nEm seguida, insira o código de verificação no campo indicado.\n5. Por fim, verifique o status do reembolso."
 			
 		},
-        {
+		{
+            "pergunta": "Reembolso após 7 dias?",
+            "resposta": "O prazo para cancelamento ou desistência do nosso info produto é de 7 dias corridos após a data de inserção, conforme estabelecido pelo Art. 49 do Código de Defesa do Consumidor (CDC). O consumidor tem o direito de desistir do contrato no prazo de 7 dias a partir da sua assinatura ou do recebimento do produto ou serviço. Além disso, é possível cancelar apenas a renovação automática do próximo ano, seguindo o passo a passo fornecido no seguinte link: https://help.hotmart.com/pt-BR/article/como-cancelar-uma-assinatura/115002183968."
+			
+		}
+		
+	],
+	"#Dúvidas": [
+		
+		{
+            "pergunta": "Como funciona o WeDrop?",
+            "resposta": "A Wedrop é uma plataforma de vendas sem estoque, onde você se tornando membro tem acesso a mais de 1.000 produtos de diversos nichos e a PREÇO DE CUSTO DE IMPORTADOR.\n\nNosso mix de produtos é variado, com mais de 10 nichos como: Utilidades domésticas, Cama mesa e banho, Fitness, Bebes, Ferramentas e construção, Infantil, Mochilas, Escolar, Natalino, Pet, Verão, Volta as aulas e dentre outros… São mais de 1.000 produtos para você vender de maneira AUTOMATIZADA.\n\nAqui na Wedrop você consegue vender através dos principais Marketplaces como Mercado Livre, Shopee, Magalu, Amazon e dentre todos os outros existentes, além também, de conseguir integrar e vender através do seu site próprio, pela Shopify, Nuvemshop, Loja integrada e todas as plataformas que se conectam com o ERP BLING.\n\nNosso maior diferencial são os custos dos produtos, sendo abaixo dos concorrentes pelo fato de importarmos ou negociarmos diretamente com as fábricas, sendo assim, nossos membros tem LUCRO REAL em cima de cada venda e o poder de competir de igual para igual com os maiores vendedores nos Marketplaces.\n\nIntegrando a Wedrop, você tem a OPORTUNIDADE em vender através do nosso endereço em SP, ou seja, de qualquer lugar do pais você estará com seu negócio ativo e vendendo no MELHOR ESTADO para se vender online, pela questão logística e também pelo fato de poder enviar seus pedidos pelo Mercado Envios FLEX e seu cliente recebendo até no mesmo dia da compra dele.\n\nSão inúmeras as VANTAGENS de se tornar um membro WEDROP, vem fazer parte desse time também."
+			
+		},
+		{
             "pergunta": "O que fazer no pós-venda",
             "resposta": "Após realizar uma venda, você deve importar o pedido no WeDrop. Caso todas as configurações estejam corretas, clique no ícone da nuvem amarela na página 'Resumo'. Em seguida, adicione saldo à sua carteira, caso ainda não o tenha feito, e efetue o pagamento do produto, se estiver tudo correto. Nossa equipe ficará encarregada de separar e enviar o pedido para o seu comprador final."
         },
@@ -96,12 +113,36 @@
             "resposta": "A conta deve ser exclusiva para os produtos da WeDrop, pois o endereço do galpão deve ser informado como endereço de envio/devolução nos marketplaces."
         },
 		{
-            "pergunta": "Produto chegou danificado, como proceder?",
-            "resposta": "Quando um item apresenta danos físicos, a melhor abordagem é entrar em contato com o suporte do Marketplace para solicitar o ressarcimento. É importante explicar que a loja enviou o produto em perfeito estado e, se houve algum dano físico, a responsabilidade recai sobre a transportadora."
+            "pergunta": "Qual a diferença de FUllcommerce e WeDrop?",
+            "resposta": "O acesso é agora unificado: ao entrar pela Wedrop, você terá direito a todo o ecossistema do Grupo Full Commerce. Isso inclui a capacidade de vender sem estoque, acesso às ferramentas, videoaulas, suporte e participação na comunidade de networking, entre outros benefícios. É importante destacar que o Grupo Full Commerce é a empresa proprietária da plataforma Wedrop, portanto, não há diferença entre eles."
+        },
+		{
+            "pergunta": "Consigo trocar e-mail de acesso?",
+            "resposta": "É importante observar que, antes de proceder com a alteração, você precisará entrar em contato com a Hotmart. É importante ter em mente que, caso você já tenha realizado alguma ação em sua conta no WeDrop, a alteração de e-mail resultará na perda de todos os dados associados à sua conta atual. Infelizmente, não há a opção de editar o e-mail diretamente; portanto, será necessário criar uma nova conta.\n\nSe você desejar prosseguir com a alteração mesmo assim, siga o passo a passo fornecido no seguinte link: https://help.hotmart.com/pt-br/article/como-alterar-o-meu-e-mail-de-acesso-ao-produto-/9370387188877. Após a aprovação da Hotmart, por favor, entre em contato conosco novamente para que possamos ajudá-lo na continuidade do processo."
+        },
+		{
+            "pergunta": "Realizei uma pesquisa no Reclame Aqui",
+            "resposta": "É importante ressaltar que, considerando nosso grupo com mais de 12.000 membros, o número de reclamações é bastante limitado, totalizando apenas 60. Isso representa exatamente 0,5% de insatisfação em relação ao total de membros. Estamos constantemente trabalhando para melhorar nossos serviços e garantir a satisfação de nossos usuários."
+        },
+		{
+            "pergunta": "Como é feito o pagamento dos produtos?",
+            "resposta": "Você adiciona saldo à sua conta na Wedrop. Esse saldo pode ser inserido por meio de duas opções: PIX ou cartão de crédito. Após o saldo estar disponível em sua carteira, todos os custos dos produtos que você vender serão automaticamente deduzidos desse saldo. Isso oferece uma maneira conveniente e flexível de gerenciar suas transações e garantir que os custos dos produtos sejam cobertos de forma eficiente."
         },
 		{
             "pergunta": "Contabilidade Indicada (Contato)",
             "resposta": "Contabilidade Indicada.\n(FS CONTÁBIL)\n\nWhatsApp ⇾ (11) 96785-0173\nE-mail ⇾ clientes.wedrop@fscont.com.br\nSegunda à Sexta das 08h as 17h."
+        },
+		{
+            "pergunta": "Quantas contas posso integrar no WeDrop?",
+            "resposta": "O WeDrop suporta até duas (2) contas de cada Marketplace ou plataforma."
+        },
+		{
+            "pergunta": "Vocês emitem Nota Fiscal para o meu cliente?",
+            "resposta": "O vendedor deve sempre emitir a nota fiscal para o cliente final. A WeDrop emite a nota fiscal de entrada apenas para membros vendedores com CNPJ. No caso de vendas realizadas com CPF, não há emissão de notas fiscais, e os produtos são enviados juntamente com a declaração de conteúdo."
+        },
+		{
+            "pergunta": "Como é feito a atualização de estoque?",
+            "resposta": "A atualização de estoque é realizada de forma automática. É importante ressaltar que para que esse processo ocorra sem problemas, é necessário configurar e integrar todas as configurações corretamente. Dessa forma, o sistema garantirá que as informações de estoque sejam atualizadas de maneira precisa e eficiente, refletindo com precisão a disponibilidade de produtos em seu sistema."
         },
 		{
             "pergunta": "Contabilidade Indicada (Valores)",

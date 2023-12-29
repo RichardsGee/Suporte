@@ -1,0 +1,13 @@
+{
+    "#Regras": [
+        {
+            "pergunta": "Requisitos para uso de CNPJ",
+            "resposta": "Para utilizar o WeDrop com CNPJ, é fundamental observar as seguintes DIRETRIZES:\n\n1 - O CNPJ deve pertencer a uma empresa que possua um ENDEREÇO FISCAL LOCALIZADO NO ESTADO DE SÃO PAULO.\n2 - O CNPJ deve ser de uma empresa do SETOR DE COMÉRCIO VAREJISTA (empresas de serviços não estão autorizadas a utilizar o WeDrop).\n3 - Por favor, NÃO abrir uma empresa com o MESMO ENDEREÇO DO GALPÃO DO WEDROP.\n4 - É mandatório possuir uma INSCRIÇÃO ESTADUAL ativa e um CERTIFICADO DIGITAL.\n5 - Certifique-se de compreender as configurações necessárias e saber emitir uma NOTA FISCAL ELETRÔNICA (NFE) utilizando o sistema Bling.\n\nPara um guia detalhado sobre a configuração de CNPJ no Bling, consulte o link a seguir: <a href='https://ajuda.bling.com.br/hc/pt-br/articles/360034420894-Completar-os-dados-da-empresa'>https://ajuda.bling.com.br/hc/pt-br/articles/360034420894-Completar-os-dados-da-empresa</a>\nSiga cada passo representado pelas bolinhas verdes.\n\nImportante: Preencha corretamente seu CNPJ e INSCRIÇÃO ESTADUAL no Wedrop, pois informações imprecisas podem levar ao bloqueio da conta.\n\nCONTAS QUE NÃO SE ADEQUAREM A ESSAS REGRAS ESTARÃO SUJEITAS A BLOQUEIO E, EM CASO DE PERSISTÊNCIA, PODERÃO SER EXCLUÍDAS."
+			
+		},
+        {	
+        	"pergunta": "Política de Devolução",
+            "resposta": "#AVISO: O Wedrop não recebe nem se responsabiliza por compras entregues no Galpão.\n\n#ATENÇÃO:\n1. Compras particulares enviadas ao CD serão consideradas perdidas.\n2. Não iremos comprometer nossa eficiência logística, desviando o foco dos envios e devoluções da Wedrop para lidar com pedidos particulares de terceiros.\n\n✅ O WEDROP É EXCLUSIVAMENTE VOLTADO PARA O ENVIO E RECEBIMENTO DE VENDAS DE PRODUTOS DA PLATAFORMA."
+		}
+		]
+}
