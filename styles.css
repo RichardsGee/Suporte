@@ -435,6 +435,33 @@ label[for="campo-pesquisa"] {
     padding: 20px;
     overflow-y: auto;
 }
+/* Estilos para o botão do microfone */
+#botao-voz {
+    background-color: #FFCA00; /* Cor de fundo amarela */
+    color: #121212; /* Cor do texto */
+    padding: 5px 5px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor do mouse de mãozinha ao passar sobre o botão */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: 600; /* Texto em negrito */
+    font-family: 'Poppins', sans-serif; /* Certifique-se de incluir a fonte Poppins */
+    display: flex; /* Use display flex para alinhar verticalmente */
+    align-items: center; /* Centralize verticalmente */
+}
+
+/* Estilo para o ícone dentro do botão do microfone */
+#botao-voz i {
+    margin: 0; /* Remova qualquer margem do ícone */
+}
+
+/* Estilo para o botão do microfone quando hover (mouse sobre ele) */
+#botao-voz:hover {
+    background-color: #FF9500; /* Cor de fundo alterada ao passar o mouse */
+}
+
+
+
 
 
 
