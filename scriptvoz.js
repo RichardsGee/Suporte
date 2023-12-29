@@ -27,14 +27,12 @@ if ('webkitSpeechRecognition' in window) {
 
     // Evento de resultado da fala
     recognition.onresult = function (event) {
-    var resultado = event.results[0][0].transcript.trim(); // Remove espaços em branco
-    resultado = resultado.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ''); // Remove todas as pontuações
-    campoPesquisa.value = resultado;
-    campoPesquisa.dispatchEvent(new Event('input')); // Dispara o evento de input manualmente
-    textoReconhecidoElement.textContent = 'Texto reconhecido: ' + resultado;
-};
-
-
+        var resultado = event.results[0][0].transcript.trim(); // Remove espaços em branco
+        resultado = resultado.replace(/[.?]/g, ''); // Remove pontos e interrogações
+        campoPesquisa.value = resultado;
+        campoPesquisa.dispatchEvent(new Event('input')); // Dispara o evento de input manualmente
+        textoReconhecidoElement.textContent = 'Texto reconhecido: ' + resultado;
+    };
 
     // Evento de clique no botão de ativação por voz
     botaoVoz.addEventListener('click', function () {
